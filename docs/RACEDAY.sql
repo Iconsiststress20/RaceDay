@@ -230,3 +230,62 @@ VALUES
      'Cape Mountain Trail', 150, 250.00);
 GO
 
+SELECT * FROM Events;
+
+INSERT INTO EventCategories
+    (CategoryName, Description, DistanceKM, MinAge, MaxAge)
+VALUES
+    ('5K Open',
+     'Open 5 kilometre road race category.',
+     5.00, 16, NULL),
+
+    ('10K Open',
+     'Open 10 kilometre trail race category.',
+     10.00, 18, NULL);
+GO
+
+SELECT * FROM EventCategories;
+
+INSERT INTO EventEnrollments
+    (ParticipantID, EventID, CategoryID, Status, PaymentStatus, RaceNumber)
+VALUES
+    (1, 1, 1, 'Registered', 'Paid', 'JHB001'),
+    (2, 2, 2, 'Registered', 'Paid', 'CPT001');
+GO
+
+SELECT * FROM EventEnrollments;
+
+INSERT INTO Results
+    (EnrollmentID, FinishTime, OverallPosition, CategoryPosition, Points, Remarks)
+VALUES
+    (1, '00:28:35', 12, 5, 85.00, 'Good performance'),
+    (2, '00:55:42', 8, 3, 92.00, 'Excellent trail run');
+GO
+
+SELECT * FROM Results;
+
+SELECT
+    fk.name AS ForeignKeyName,
+    OBJECT_NAME(fk.parent_object_id) AS TableName,
+    OBJECT_NAME(fk.referenced_object_id) AS ReferencesTable
+FROM sys.foreign_keys fk
+ORDER BY TableName, ForeignKeyName;
+
+SELECT
+    TABLE_NAME,
+    COLUMN_NAME,
+    DATA_TYPE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME IN
+(
+    'Users',
+    'Organisers',
+    'Participants',
+    'Events',
+    'EventEnvironments',
+    'EventCategories',
+    'EventEnrollments',
+    'Results'
+)
+ORDER BY TABLE_NAME, ORDINAL_POSITION;
+
