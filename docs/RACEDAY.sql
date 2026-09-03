@@ -147,3 +147,86 @@ VALUES
 GO
 
 SELECT * FROM Organisers;
+
+INSERT INTO Participants
+    (UserID, DateOfBirth, Gender, ContactNumber, Address,
+     EmergencyContactName, EmergencyContactNumber)
+VALUES
+    (1, '2002-05-15', 'Male', '0712345678',
+     '10 Main Street', 'Mary Smith', '0798765432'),
+
+    (3, '2001-09-20', 'Male', '0734567890',
+     '25 Park Avenue', 'Lisa Williams', '0787654321');
+GO
+
+SELECT * FROM Participants;
+
+ALTER TABLE Participants
+ADD
+    DateOfBirth DATE NOT NULL,
+    Gender NVARCHAR(10) NOT NULL,
+    ContactNumber NVARCHAR(20) NULL,
+    Address NVARCHAR(255) NULL,
+    EmergencyContactName NVARCHAR(150) NULL,
+    EmergencyContactNumber NVARCHAR(20) NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE();
+GO
+
+SELECT * FROM Participants;
+
+
+INSERT INTO Participants
+    (UserID, DateOfBirth, Gender, ContactNumber, Address,
+     EmergencyContactName, EmergencyContactNumber)
+VALUES
+    (1, '2002-05-15', 'Male', '0712345678',
+     '10 Main Street', 'Mary Smith', '0798765432'),
+
+    (3, '2001-09-20', 'Male', '0734567890',
+     '25 Park Avenue', 'Lisa Williams', '0787654321');
+GO
+
+SELECT * FROM Participants;
+
+INSERT INTO EventEnvironments
+    (EnvironmentName, EnvironmentType, Description, Address, City, Province, RouteInformation)
+VALUES
+    ('City Park Route', 'Road',
+     'Road race through the city park.',
+     '10 Park Road', 'Johannesburg', 'Gauteng',
+     '5 km loop around City Park'),
+
+    ('Mountain Trail', 'Trail',
+     'Off-road trail running environment.',
+     'Mountain View Road', 'Cape Town', 'Western Cape',
+     '10 km mountain trail');
+GO
+
+SELECT * FROM EventEnvironments;
+
+ALTER TABLE EventEnvironments
+ADD
+    City NVARCHAR(100) NULL,
+    Province NVARCHAR(100) NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE();
+GO
+
+SELECT * FROM EventEnvironments;
+
+INSERT INTO Events
+    (OrganiserID, EnvironmentID, EventName, EventDescription,
+     EventDate, EventTime, Location, MaxParticipants, EntryFee)
+VALUES
+    (1, 1,
+     'Johannesburg City Run',
+     'A 5 km road race through the city park.',
+     '2026-10-10', '08:00',
+     'Johannesburg City Park', 200, 150.00),
+
+    (1, 2,
+     'Cape Mountain Challenge',
+     'A 10 km trail running event through the mountain route.',
+     '2026-11-15', '07:30',
+     'Cape Mountain Trail', 150, 250.00);
+GO
+
