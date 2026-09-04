@@ -1,6 +1,13 @@
 CREATE DATABASE RaceDay;
 GO
 
+USE RaceDay;
+GO
+
+
+-- =============================================
+-- 1. Users
+-- =============================================
 CREATE TABLE Users
 (
     UserID INT IDENTITY(1,1) PRIMARY KEY,
@@ -15,6 +22,10 @@ CREATE TABLE Users
 );
 GO
 
+
+-- =============================================
+-- 2. Organisers
+-- =============================================
 CREATE TABLE Organisers
 (
     OrganiserID INT IDENTITY(1,1) PRIMARY KEY,
@@ -22,29 +33,45 @@ CREATE TABLE Organisers
     OrganisationName NVARCHAR(150) NOT NULL,
     ContactEmail NVARCHAR(150) NOT NULL,
     ContactPhone NVARCHAR(20) NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
 
     CONSTRAINT FK_Organisers_Users
         FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 GO
 
+
+-- =============================================
+-- 3. Participants
+-- =============================================
 CREATE TABLE Participants
 (
     ParticipantID INT IDENTITY(1,1) PRIMARY KEY,
     UserID INT NOT NULL UNIQUE,
+    DateOfBirth DATE NOT NULL,
+    Gender NVARCHAR(10) NOT NULL,
+    ContactNumber NVARCHAR(20) NULL,
+    Address NVARCHAR(255) NULL,
+    EmergencyContactName NVARCHAR(150) NULL,
+    EmergencyContactNumber NVARCHAR(20) NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
 
     CONSTRAINT FK_Participants_Users
         FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 GO
 
+
+-- =============================================
+-- 4. Event Environments
+-- =============================================
 CREATE TABLE EventEnvironments
 (
     EnvironmentID INT IDENTITY(1,1) PRIMARY KEY,
     EnvironmentName NVARCHAR(150) NOT NULL,
-    EnvironmentType NVARCHAR(50) NOT NULL,
+    EnvironmentType NVARCHAR(100) NOT NULL,
     Description NVARCHAR(500) NULL,
-    Address NVARCHAR(200) NULL,
+    Address NVARCHAR(255) NULL,
     City NVARCHAR(100) NULL,
     Province NVARCHAR(100) NULL,
     RouteInformation NVARCHAR(500) NULL,
@@ -52,6 +79,10 @@ CREATE TABLE EventEnvironments
 );
 GO
 
+
+-- =============================================
+-- 5. Events
+-- =============================================
 CREATE TABLE Events
 (
     EventID INT IDENTITY(1,1) PRIMARY KEY,
@@ -60,9 +91,9 @@ CREATE TABLE Events
     EventName NVARCHAR(150) NOT NULL,
     EventDescription NVARCHAR(500) NULL,
     EventDate DATE NOT NULL,
-    EventTime TIME NULL,
-    Location NVARCHAR(150) NOT NULL,
-    MaxParticipants INT NULL,
+    EventTime TIME NOT NULL,
+    Location NVARCHAR(255) NOT NULL,
+    MaxParticipants INT NOT NULL,
     EntryFee DECIMAL(10,2) NOT NULL DEFAULT 0.00,
     Status NVARCHAR(20) NOT NULL DEFAULT 'Active',
     CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
@@ -75,11 +106,15 @@ CREATE TABLE Events
 );
 GO
 
+
+-- =============================================
+-- 6. Event Categories
+-- =============================================
 CREATE TABLE EventCategories
 (
     CategoryID INT IDENTITY(1,1) PRIMARY KEY,
     CategoryName NVARCHAR(100) NOT NULL,
-    Description NVARCHAR(255) NULL,
+    Description NVARCHAR(500) NULL,
     DistanceKM DECIMAL(5,2) NOT NULL,
     MinAge INT NULL,
     MaxAge INT NULL,
@@ -87,6 +122,10 @@ CREATE TABLE EventCategories
 );
 GO
 
+
+-- =============================================
+-- 7. Event Enrollments
+-- =============================================
 CREATE TABLE EventEnrollments
 (
     EnrollmentID INT IDENTITY(1,1) PRIMARY KEY,
@@ -96,7 +135,7 @@ CREATE TABLE EventEnrollments
     EnrollmentDate DATETIME NOT NULL DEFAULT GETDATE(),
     Status NVARCHAR(20) NOT NULL DEFAULT 'Registered',
     PaymentStatus NVARCHAR(20) NOT NULL DEFAULT 'Pending',
-    RaceNumber NVARCHAR(20) NULL,
+    RaceNumber INT NULL,
 
     CONSTRAINT FK_EventEnrollments_Participants
         FOREIGN KEY (ParticipantID) REFERENCES Participants(ParticipantID),
@@ -109,6 +148,10 @@ CREATE TABLE EventEnrollments
 );
 GO
 
+
+-- =============================================
+-- 8. Results
+-- =============================================
 CREATE TABLE Results
 (
     ResultID INT IDENTITY(1,1) PRIMARY KEY,
@@ -116,176 +159,281 @@ CREATE TABLE Results
     FinishTime TIME NULL,
     OverallPosition INT NULL,
     CategoryPosition INT NULL,
-    Points DECIMAL(10,2) NULL,
-    Remarks NVARCHAR(255) NULL,
+    Points INT NULL,
+    Remarks NVARCHAR(500) NULL,
     RecordedAt DATETIME NOT NULL DEFAULT GETDATE(),
 
-    CONSTRAINT FK_Results_EventEnrollments
+    CONSTRAINT FK_Results_Enrollments
         FOREIGN KEY (EnrollmentID) REFERENCES EventEnrollments(EnrollmentID)
 );
 GO
 
-SELECT TABLE_NAME
-FROM INFORMATION_SCHEMA.TABLES
-WHERE TABLE_TYPE = 'BASE TABLE'
-ORDER BY TABLE_NAME;
 
+-- =============================================
+-- SAMPLE DATA
+-- =============================================
+
+-- Users
 INSERT INTO Users
-    (FirstName, LastName, Email, PasswordHash, PhoneNumber, Role)
+(
+    FirstName,
+    LastName,
+    Email,
+    PasswordHash,
+    PhoneNumber,
+    Role
+)
 VALUES
-    ('John', 'Smith', 'john.smith@example.com', 'SampleHash001', '0712345678', 'Participant'),
-    ('Sarah', 'Jones', 'sarah.jones@example.com', 'SampleHash002', '0723456789', 'Organiser'),
-    ('David', 'Williams', 'david.williams@example.com', 'SampleHash003', '0734567890', 'Participant');
+(
+    'John',
+    'Smith',
+    'john@example.com',
+    'hashed_password_1',
+    '0821111111',
+    'Organiser'
+),
+(
+    'Sarah',
+    'Jones',
+    'sarah@example.com',
+    'hashed_password_2',
+    '0822222222',
+    'Participant'
+),
+(
+    'David',
+    'Williams',
+    'david@example.com',
+    'hashed_password_3',
+    '0823333333',
+    'Participant'
+);
 GO
+
+
+-- Organiser
+INSERT INTO Organisers
+(
+    UserID,
+    OrganisationName,
+    ContactEmail,
+    ContactPhone
+)
+VALUES
+(
+    1,
+    'RaceDay Events',
+    'events@raceday.com',
+    '0115551234'
+);
+GO
+
+
+-- Participants
+INSERT INTO Participants
+(
+    UserID,
+    DateOfBirth,
+    Gender,
+    ContactNumber,
+    Address,
+    EmergencyContactName,
+    EmergencyContactNumber
+)
+VALUES
+(
+    2,
+    '2000-05-15',
+    'Female',
+    '0822222222',
+    'Cape Town',
+    'Jane Jones',
+    '0824444444'
+),
+(
+    3,
+    '1998-08-20',
+    'Male',
+    '0823333333',
+    'Johannesburg',
+    'Mary Williams',
+    '0825555555'
+);
+GO
+
+
+-- Event Environments
+INSERT INTO EventEnvironments
+(
+    EnvironmentName,
+    EnvironmentType,
+    Description,
+    Address,
+    City,
+    Province,
+    RouteInformation
+)
+VALUES
+(
+    'Green Point Stadium',
+    'Stadium',
+    'Main race starting and finishing area',
+    '1 Fritz Sonnenberg Road',
+    'Cape Town',
+    'Western Cape',
+    'Stadium loop and surrounding roads'
+),
+(
+    'Johannesburg Park',
+    'Outdoor',
+    'Outdoor running environment',
+    '123 Park Road',
+    'Johannesburg',
+    'Gauteng',
+    'Park route with marked running sections'
+);
+GO
+
+
+-- Events
+INSERT INTO Events
+(
+    OrganiserID,
+    EnvironmentID,
+    EventName,
+    EventDescription,
+    EventDate,
+    EventTime,
+    Location,
+    MaxParticipants,
+    EntryFee,
+    Status
+)
+VALUES
+(
+    1,
+    1,
+    'Cape Town Fun Run',
+    'A community running event',
+    '2026-10-10',
+    '08:00:00',
+    'Cape Town',
+    500,
+    150.00,
+    'Active'
+),
+(
+    1,
+    2,
+    'Johannesburg City Run',
+    'A city running event',
+    '2026-11-15',
+    '07:30:00',
+    'Johannesburg',
+    300,
+    120.00,
+    'Active'
+);
+GO
+
+
+-- Event Categories
+INSERT INTO EventCategories
+(
+    CategoryName,
+    Description,
+    DistanceKM,
+    MinAge,
+    MaxAge
+)
+VALUES
+(
+    '5KM Fun Run',
+    'Short distance community race',
+    5.00,
+    12,
+    100
+),
+(
+    '10KM Race',
+    'Standard 10 kilometre race',
+    10.00,
+    16,
+    100
+);
+GO
+
+
+-- Event Enrollments
+INSERT INTO EventEnrollments
+(
+    ParticipantID,
+    EventID,
+    CategoryID,
+    Status,
+    PaymentStatus,
+    RaceNumber
+)
+VALUES
+(
+    1,
+    1,
+    1,
+    'Registered',
+    'Paid',
+    101
+),
+(
+    2,
+    2,
+    2,
+    'Registered',
+    'Paid',
+    202
+);
+GO
+
+
+-- Results
+INSERT INTO Results
+(
+    EnrollmentID,
+    FinishTime,
+    OverallPosition,
+    CategoryPosition,
+    Points,
+    Remarks
+)
+VALUES
+(
+    1,
+    '00:32:15',
+    25,
+    10,
+    75,
+    'Good performance'
+),
+(
+    2,
+    '00:51:40',
+    18,
+    5,
+    90,
+    'Excellent performance'
+);
+GO
+
+
+-- =============================================
+-- VERIFICATION
+-- =============================================
 
 SELECT * FROM Users;
-
-INSERT INTO Organisers
-    (UserID, OrganisationName, ContactEmail, ContactPhone)
-VALUES
-    (2, 'RaceDay Events', 'sarah.jones@example.com', '0723456789');
-GO
-
 SELECT * FROM Organisers;
-
-INSERT INTO Participants
-    (UserID, DateOfBirth, Gender, ContactNumber, Address,
-     EmergencyContactName, EmergencyContactNumber)
-VALUES
-    (1, '2002-05-15', 'Male', '0712345678',
-     '10 Main Street', 'Mary Smith', '0798765432'),
-
-    (3, '2001-09-20', 'Male', '0734567890',
-     '25 Park Avenue', 'Lisa Williams', '0787654321');
-GO
-
 SELECT * FROM Participants;
-
-ALTER TABLE Participants
-ADD
-    DateOfBirth DATE NOT NULL,
-    Gender NVARCHAR(10) NOT NULL,
-    ContactNumber NVARCHAR(20) NULL,
-    Address NVARCHAR(255) NULL,
-    EmergencyContactName NVARCHAR(150) NULL,
-    EmergencyContactNumber NVARCHAR(20) NULL,
-    CreatedAt DATETIME NOT NULL DEFAULT GETDATE();
-GO
-
-SELECT * FROM Participants;
-
-
-INSERT INTO Participants
-    (UserID, DateOfBirth, Gender, ContactNumber, Address,
-     EmergencyContactName, EmergencyContactNumber)
-VALUES
-    (1, '2002-05-15', 'Male', '0712345678',
-     '10 Main Street', 'Mary Smith', '0798765432'),
-
-    (3, '2001-09-20', 'Male', '0734567890',
-     '25 Park Avenue', 'Lisa Williams', '0787654321');
-GO
-
-SELECT * FROM Participants;
-
-INSERT INTO EventEnvironments
-    (EnvironmentName, EnvironmentType, Description, Address, City, Province, RouteInformation)
-VALUES
-    ('City Park Route', 'Road',
-     'Road race through the city park.',
-     '10 Park Road', 'Johannesburg', 'Gauteng',
-     '5 km loop around City Park'),
-
-    ('Mountain Trail', 'Trail',
-     'Off-road trail running environment.',
-     'Mountain View Road', 'Cape Town', 'Western Cape',
-     '10 km mountain trail');
-GO
-
 SELECT * FROM EventEnvironments;
-
-ALTER TABLE EventEnvironments
-ADD
-    City NVARCHAR(100) NULL,
-    Province NVARCHAR(100) NULL,
-    CreatedAt DATETIME NOT NULL DEFAULT GETDATE();
-GO
-
-SELECT * FROM EventEnvironments;
-
-INSERT INTO Events
-    (OrganiserID, EnvironmentID, EventName, EventDescription,
-     EventDate, EventTime, Location, MaxParticipants, EntryFee)
-VALUES
-    (1, 1,
-     'Johannesburg City Run',
-     'A 5 km road race through the city park.',
-     '2026-10-10', '08:00',
-     'Johannesburg City Park', 200, 150.00),
-
-    (1, 2,
-     'Cape Mountain Challenge',
-     'A 10 km trail running event through the mountain route.',
-     '2026-11-15', '07:30',
-     'Cape Mountain Trail', 150, 250.00);
-GO
-
 SELECT * FROM Events;
-
-INSERT INTO EventCategories
-    (CategoryName, Description, DistanceKM, MinAge, MaxAge)
-VALUES
-    ('5K Open',
-     'Open 5 kilometre road race category.',
-     5.00, 16, NULL),
-
-    ('10K Open',
-     'Open 10 kilometre trail race category.',
-     10.00, 18, NULL);
-GO
-
 SELECT * FROM EventCategories;
-
-INSERT INTO EventEnrollments
-    (ParticipantID, EventID, CategoryID, Status, PaymentStatus, RaceNumber)
-VALUES
-    (1, 1, 1, 'Registered', 'Paid', 'JHB001'),
-    (2, 2, 2, 'Registered', 'Paid', 'CPT001');
-GO
-
 SELECT * FROM EventEnrollments;
-
-INSERT INTO Results
-    (EnrollmentID, FinishTime, OverallPosition, CategoryPosition, Points, Remarks)
-VALUES
-    (1, '00:28:35', 12, 5, 85.00, 'Good performance'),
-    (2, '00:55:42', 8, 3, 92.00, 'Excellent trail run');
-GO
-
 SELECT * FROM Results;
-
-SELECT
-    fk.name AS ForeignKeyName,
-    OBJECT_NAME(fk.parent_object_id) AS TableName,
-    OBJECT_NAME(fk.referenced_object_id) AS ReferencesTable
-FROM sys.foreign_keys fk
-ORDER BY TableName, ForeignKeyName;
-
-SELECT
-    TABLE_NAME,
-    COLUMN_NAME,
-    DATA_TYPE
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME IN
-(
-    'Users',
-    'Organisers',
-    'Participants',
-    'Events',
-    'EventEnvironments',
-    'EventCategories',
-    'EventEnrollments',
-    'Results'
-)
-ORDER BY TABLE_NAME, ORDINAL_POSITION;
-
+GO
