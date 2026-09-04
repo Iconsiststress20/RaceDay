@@ -51,7 +51,7 @@ A GitHub Actions workflow validates the repository structure and checks that the
 
 ### Successful CI/CD Build
 
-[Insert screenshot of the successful green GitHub Actions build here.]
+![Successful CI/CD Build](docs/ci-cd-success.png)
 
 ## Video
 
