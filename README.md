@@ -57,4 +57,4 @@ A GitHub Actions workflow validates the repository structure and checks that the
 
 An unlisted YouTube video explaining the RaceDay planning documents, ERD decisions, API endpoint plan, and SQL database script is provided below.
 
-YouTube Video: [Insert YouTube video link here]
+YouTube Video: [https://youtu.be/BmGK16-3jpw]
