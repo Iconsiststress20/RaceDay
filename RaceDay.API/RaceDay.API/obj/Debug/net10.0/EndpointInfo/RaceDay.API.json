@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/test-db": {
+      "get": {
+        "tags": [
+          "RaceDay.API"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -73,6 +85,9 @@
     }
   },
   "tags": [
+    {
+      "name": "RaceDay.API"
+    },
     {
       "name": "WeatherForecast"
     }
