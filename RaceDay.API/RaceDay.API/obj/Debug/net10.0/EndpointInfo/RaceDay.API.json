@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Participants": {
+      "get": {
+        "tags": [
+          "Participants"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/test-db": {
       "get": {
         "tags": [
@@ -97,6 +109,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Participants"
+    },
     {
       "name": "RaceDay.API"
     },

@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "RaceDay.Controllers.ParticipantsController",
+    "Method": "GetParticipants",
+    "RelativePath": "api/Participants",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Program\u002B\u003C\u003Ec",
     "Method": "\u003C\u003CMain\u003E$\u003Eb__0_1",
     "RelativePath": "api/test-db",
