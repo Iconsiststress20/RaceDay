@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using RaceDay.Models;
 
 namespace RaceDay.Data
 {
@@ -9,5 +10,8 @@ namespace RaceDay.Data
             : base(options)
         {
         }
+
+        public DbSet<User> Users { get; set; }
     }
 }
+
