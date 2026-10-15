@@ -17,6 +17,18 @@
         }
       }
     },
+    "/api/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -87,6 +99,9 @@
   "tags": [
     {
       "name": "RaceDay.API"
+    },
+    {
+      "name": "Users"
     },
     {
       "name": "WeatherForecast"
