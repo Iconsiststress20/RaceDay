@@ -12,7 +12,12 @@ namespace RaceDay.Data
         }
 
         public DbSet<User> Users { get; set; }
+
         public DbSet<Participant> Participants { get; set; }
+
+        public DbSet<Organiser> Organisers { get; set; }
+        public DbSet<EventCategory> EventCategories { get; set; }
+        public DbSet<EventEnvironment> EventEnvironments { get; set; }
     }
 }
-
+    

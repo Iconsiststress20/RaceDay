@@ -1,5 +1,25 @@
 [
   {
+    "ContainingType": "RaceDay.Controllers.EventCategoriesController",
+    "Method": "GetEventCategories",
+    "RelativePath": "api/EventCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.OrganisersController",
+    "Method": "GetOrganisers",
+    "RelativePath": "api/Organisers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RaceDay.Controllers.ParticipantsController",
     "Method": "GetParticipants",
     "RelativePath": "api/Participants",

@@ -5,6 +5,30 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/EventCategories": {
+      "get": {
+        "tags": [
+          "EventCategories"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Organisers": {
+      "get": {
+        "tags": [
+          "Organisers"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Participants": {
       "get": {
         "tags": [
@@ -109,6 +133,12 @@
     }
   },
   "tags": [
+    {
+      "name": "EventCategories"
+    },
+    {
+      "name": "Organisers"
+    },
     {
       "name": "Participants"
     },
