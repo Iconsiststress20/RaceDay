@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RaceDay.Data;
 
 namespace RaceDay.Controllers
 {
+    [Authorize(Roles = "Organiser")]
     [ApiController]
     [Route("api/[controller]")]
     public class EventEnvironmentsController : ControllerBase

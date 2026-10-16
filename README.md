@@ -1,60 +1,274 @@
-# RaceDay
+# RaceDay – Race Event Management System
 
-## System Description
+## 1. Project Overview
 
-RaceDay is a race event management system designed to manage running events, organisers, participants, race categories, event environments, registrations, and race results.
+RaceDay is an ASP.NET Core Web API developed to support race event management. It provides functionality for user registration, login, event management, event enrolments and race results.
 
-The system provides a structured database design and planned API endpoints to support the management of race events from creation and registration through to recording and viewing race results.
+The application uses SQL Server to store data and JWT (JSON Web Token) authentication to secure protected endpoints. Swagger is used to document and test the API.
 
-## User Roles
+## 2. Technologies Used
 
-### Organiser
+- C#
+- ASP.NET Core Web API (.NET 10)
+- SQL Server
+- Entity Framework Core
+- JWT Bearer Authentication
+- Password hashing
+- Swagger / OpenAPI
+- Git and GitHub
+- GitHub Actions for continuous integration
 
-The Organiser manages race events and their related information. Organisers can create and update events, manage race categories and event environments, manage participant registrations, and record race results.
+## 3. User Roles
 
-### Participant
+RaceDay supports two user roles.
 
-The Participant can register for race events and categories, manage their enrolments, and view their race results.
+### 3.1 Participant
 
-## Planning Documents
+Participants use the system to access functionality associated with their race participation.
 
-The `/docs` folder contains the main planning and database documents for the RaceDay system:
+Participant functionality includes:
 
-- Entity Relationship Diagram (ERD)
-- API Endpoint Plan
-- SQL Database Script
+- Registering a participant account.
+- Logging in securely.
+- Accessing protected endpoints permitted to the Participant role.
+- Viewing their own race results through the My Results endpoint.
 
-## Database
+Participants can only access information and operations permitted by the application's authorization rules.
 
-The SQL database script creates the RaceDay database and its tables, including:
+### 3.2 Organiser
 
-- Users
-- Organisers
-- Participants
-- Events
-- Event Environments
-- Event Categories
-- Event Enrollments
-- Results
+Organisers manage race-related information and operations.
 
-The database includes primary keys, foreign keys, constraints, default values, and sample data.
+Organiser functionality includes:
 
-## API
+- Registering an organiser account and organisation details.
+- Logging in securely.
+- Accessing organiser-protected API endpoints.
+- Managing race-related information where the relevant endpoints are implemented.
+- Creating, viewing, updating and deleting race results.
 
-The API Endpoint Plan documents the planned REST API endpoints for authentication, users, organisers, events, categories, event environments, enrolments, and results.
+The API uses role-based authorization to restrict organiser-only operations.
 
-## GitHub and CI/CD
+## 4. Main Features
 
-GitHub is used for version control and project management.
+- Participant and organiser registration.
+- User login and password hashing.
+- JWT-based authentication.
+- Role-based access control.
+- SQL Server database integration.
+- Event categories and event environments.
+- Event management and enrolments.
+- Race result retrieval and management.
+- Swagger API documentation and testing.
+- GitHub Actions CI workflow for automated validation.
 
-A GitHub Actions workflow validates the repository structure and checks that the required `docs` folder and SQL script are present.
+## 5. Database
 
-### Successful CI/CD Build
+The application uses a SQL Server database named `RaceDay`.
 
-![Successful CI/CD Build](docs/ci-cd-success.png)
+The database includes the following tables:
 
-## Video
+- `Users`
+- `Participants`
+- `Organisers`
+- `EventCategories`
+- `EventEnvironments`
+- `Events`
+- `EventEnrollments`
+- `Results`
 
-An unlisted YouTube video explaining the RaceDay planning documents, ERD decisions, API endpoint plan, and SQL database script is provided below.
+Entity Framework Core is used to access the database through the application's database context.
 
-YouTube Video: [https://youtu.be/BmGK16-3jpw]
+## 6. Setup Instructions
+
+### 6.1 Prerequisites
+
+Install the following software:
+
+- Visual Studio with the ASP.NET and web development workload.
+- .NET 10 SDK.
+- SQL Server.
+- SQL Server Management Studio (SSMS), or an equivalent SQL Server client.
+- Git, if you want to clone the repository.
+
+### 6.2 Obtain the Project
+
+Clone the repository using Git:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Replace `YOUR_GITHUB_REPOSITORY_URL` with the actual URL of the RaceDay repository.
+
+Alternatively, download the repository from GitHub and open the solution file in Visual Studio.
+
+### 6.3 Configure the Database
+
+1. Start SQL Server.
+2. Open SQL Server Management Studio.
+3. Connect to your SQL Server instance.
+4. Confirm that the `RaceDay` database and its required tables exist.
+5. Configure the application's SQL Server connection string.
+
+The connection string must match your local SQL Server instance and database.
+
+If the project uses Entity Framework Core migrations, apply the migrations required by the project. If the database was created using SQL scripts, execute the required scripts instead.
+
+### 6.4 Configure Application Secrets
+
+Configure the database connection string and JWT signing key using the application's supported configuration system or .NET User Secrets.
+
+For example, from the project directory:
+
+```bash
+dotnet user-secrets init
+```
+
+Add the required values using the configuration keys expected by your application.
+
+**Security:** never commit database passwords, JWT signing keys, access tokens or other secrets to GitHub. Do not copy example configuration keys without checking the actual `Program.cs` configuration.
+
+### 6.5 Restore and Build the Project
+
+Open a terminal in the directory containing the API project file (`.csproj`) and run:
+
+```bash
+dotnet restore
+dotnet build
+```
+
+The restore command downloads the required NuGet packages. The build command compiles the project and reports compilation errors, if any.
+
+### 6.6 Run the Application
+
+Run the project from Visual Studio using the green **Start** button, or use:
+
+```bash
+dotnet run
+```
+
+Open the Swagger URL displayed in the terminal or browser when the application starts.
+
+For example:
+
+```text
+https://localhost:YOUR_PORT/swagger
+```
+
+Replace `YOUR_PORT` with the actual port configured for your application.
+
+## 7. Authentication and API Usage
+
+### 7.1 Register an Account
+
+Use the appropriate registration endpoint in Swagger to create a participant or organiser account.
+
+For organiser registration, provide the required personal details and organisation information.
+
+### 7.2 Log In
+
+Use:
+
+`POST /api/Users/login`
+
+Submit the email and password for the registered account.
+
+When login succeeds, the API returns a JWT access token.
+
+### 7.3 Authorize Requests in Swagger
+
+1. Log in and obtain a fresh JWT token.
+2. Click **Authorize** in Swagger.
+3. Enter the token in the format expected by the configured Bearer authentication scheme.
+4. Click **Authorize**, then close the dialog.
+5. Execute the protected endpoints allowed for that role.
+
+Expired tokens must be replaced by logging in again.
+
+### 7.4 Results Endpoints
+
+The results functionality includes:
+
+- `GET /api/Results` — retrieve results as an organiser.
+- `GET /api/Results/my-results` — retrieve results associated with the authenticated participant.
+- `POST /api/Results` — create a result for an existing enrolment.
+- `PUT /api/Results/{id}` — update an existing result.
+- `DELETE /api/Results/{id}` — delete an existing result.
+
+The create endpoint checks that the enrolment exists and prevents duplicate results for the same enrolment.
+
+## 8. CI/CD – Continuous Integration
+
+RaceDay uses GitHub Actions to automate project validation when changes are pushed to the repository or a pull request is opened, according to the configured workflow triggers.
+
+The CI workflow should:
+
+1. Check out the repository.
+2. Set up the required .NET SDK.
+3. Restore project dependencies.
+4. Build the application.
+5. Run the automated tests, if a test project is configured.
+
+### 8.1 CI/CD Workflow Screenshot
+
+The screenshot below should show the actual result of the RaceDay GitHub Actions workflow.
+
+**Insert your screenshot here:**
+
+![RaceDay GitHub Actions CI workflow result](docs/images/ci-workflow.png)
+
+*Figure 1: RaceDay GitHub Actions workflow showing the build and test results.*
+
+To add the screenshot:
+
+1. Open your repository on GitHub.
+2. Select the **Actions** tab.
+3. Open the latest workflow run.
+4. Capture a screenshot showing the workflow name, run status and relevant job results.
+5. Save the image as `ci-workflow.png`.
+6. Place it in the repository at `docs/images/ci-workflow.png`.
+7. Commit and push the screenshot together with the README update.
+
+Only describe the workflow as successful when the actual run shows that the required jobs passed.
+
+## 9. Demonstration Video
+
+The project demonstration video presents the RaceDay application, its main features, and the API testing process.
+
+**YouTube video:** [Watch the RaceDay Part 2 demonstration](YOUR_YOUTUBE_VIDEO_URL)
+
+Replace `YOUR_YOUTUBE_VIDEO_URL` with the actual YouTube link. Ensure the video is accessible to the person marking the assignment.
+
+The video should demonstrate the project structure, database, registration and login, authentication, role-based access, results endpoints, and relevant testing evidence.
+
+## 10. Testing
+
+Swagger can be used to test the API endpoints and inspect HTTP responses.
+
+Recommended checks include:
+
+- Participant registration and login.
+- Organiser registration and login.
+- Authorized access to protected endpoints.
+- Rejection of expired or invalid tokens.
+- Retrieval of event enrolments and results.
+- Creation of a result for a valid enrolment.
+- Rejection of duplicate results.
+- Updating and deleting a test result.
+- Participant access to their own results.
+- Successful CI build and configured automated tests.
+
+## 11. Security Considerations
+
+- Passwords must be stored as hashes rather than plain text.
+- JWT signing keys and database credentials must not be committed to source control.
+- Protected endpoints must require valid authentication.
+- Role-based authorization must restrict access to the appropriate operations.
+- Demonstration videos and screenshots must not expose passwords, tokens or secret keys.
+
+## 12. Project Status
+
+RaceDay includes a database-backed ASP.NET Core API, participant and organiser account functionality, JWT authentication, role-based authorization, and race result operations.
+
+Before submission, verify that the README setup instructions match the repository, that the CI/CD screenshot shows the real workflow result, that the YouTube link works, and that the required endpoint and automated tests have been completed.

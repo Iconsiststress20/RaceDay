@@ -18,6 +18,9 @@ namespace RaceDay.Data
         public DbSet<Organiser> Organisers { get; set; }
         public DbSet<EventCategory> EventCategories { get; set; }
         public DbSet<EventEnvironment> EventEnvironments { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<EventEnrollment> EventEnrollments { get; set; }
+        public DbSet<Result> Results { get; set; }
     }
 }
     

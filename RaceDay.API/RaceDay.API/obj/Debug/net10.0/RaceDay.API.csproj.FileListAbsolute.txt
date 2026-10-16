@@ -168,3 +168,5 @@ C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.API\RaceDay.API\bin\Debug\net
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.API\RaceDay.API\bin\Debug\net10.0\runtimes\win-arm64\native\msalruntime_arm64.dll
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.API\RaceDay.API\bin\Debug\net10.0\runtimes\win-x64\native\msalruntime.dll
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.API\RaceDay.API\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
+C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.API\RaceDay.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.API\RaceDay.API\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
