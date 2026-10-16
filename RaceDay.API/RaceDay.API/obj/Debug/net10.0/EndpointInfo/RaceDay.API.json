@@ -17,6 +17,18 @@
         }
       }
     },
+    "/api/EventEnvironments": {
+      "get": {
+        "tags": [
+          "EventEnvironments"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Organisers": {
       "get": {
         "tags": [
@@ -135,6 +147,9 @@
   "tags": [
     {
       "name": "EventCategories"
+    },
+    {
+      "name": "EventEnvironments"
     },
     {
       "name": "Organisers"

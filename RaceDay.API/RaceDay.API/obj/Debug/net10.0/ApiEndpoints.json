@@ -10,6 +10,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RaceDay.Controllers.EventEnvironmentsController",
+    "Method": "GetEventEnvironments",
+    "RelativePath": "api/EventEnvironments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RaceDay.Controllers.OrganisersController",
     "Method": "GetOrganisers",
     "RelativePath": "api/Organisers",

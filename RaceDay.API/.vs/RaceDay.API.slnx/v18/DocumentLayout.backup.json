@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventEnvironmentsController.cs",
               "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventEnvironmentsController.cs",
               "RelativeToolTip": "RaceDay.API\\Controllers\\EventEnvironmentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwCYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-15T23:19:38.85Z",
               "EditorCaption": ""
@@ -103,8 +103,7 @@
               "RelativeToolTip": "RaceDay.API\\Models\\EventEnvironment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T23:15:54.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T23:15:54.677Z"
             },
             {
               "$type": "Document",
@@ -116,8 +115,7 @@
               "RelativeToolTip": "RaceDay.API\\Controllers\\OrganisersController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T13:31:30.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T13:31:30.873Z"
             },
             {
               "$type": "Document",
@@ -129,8 +127,7 @@
               "RelativeToolTip": "RaceDay.API\\Models\\Organiser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T13:07:02.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T13:07:02.775Z"
             },
             {
               "$type": "Document",
@@ -166,8 +163,7 @@
               "RelativeToolTip": "RaceDay.API\\Data\\RaceDayContext.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAADwvxMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T23:53:21.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T23:53:21.924Z"
             },
             {
               "$type": "Document",
@@ -179,8 +175,7 @@
               "RelativeToolTip": "RaceDay.API\\Controllers\\EventCategoriesController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwCQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T23:11:52.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T23:11:52.644Z"
             },
             {
               "$type": "Document",
@@ -216,8 +211,7 @@
               "RelativeToolTip": "RaceDay.API\\Models\\EventCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T21:36:27.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T21:36:27.315Z"
             },
             {
               "$type": "Document",
