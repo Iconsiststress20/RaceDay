@@ -93,15 +93,8 @@ Install the following software:
 
 ### 6.2 Obtain the Project
 
-Clone the repository using Git:
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
 
-Replace `YOUR_GITHUB_REPOSITORY_URL` with the actual URL of the RaceDay repository.
-
-Alternatively, download the repository from GitHub and open the solution file in Visual Studio.
 
 ### 6.3 Configure the Database
 
@@ -153,7 +146,7 @@ Open the Swagger URL displayed in the terminal or browser when the application s
 For example:
 
 ```text
-https://localhost:YOUR_PORT/swagger
+https://localhost:5180/swagger
 ```
 
 Replace `YOUR_PORT` with the actual port configured for your application.
@@ -214,33 +207,20 @@ The CI workflow should:
 
 The screenshot below should show the actual result of the RaceDay GitHub Actions workflow.
 
-**Insert your screenshot here:**
 
-![RaceDay GitHub Actions CI workflow result](docs/images/ci-workflow.png)
+![RaceDay GitHub Actions CI workflow result](docs/Workflow.png)
 
 *Figure 1: RaceDay GitHub Actions workflow showing the build and test results.*
 
-To add the screenshot:
 
-1. Open your repository on GitHub.
-2. Select the **Actions** tab.
-3. Open the latest workflow run.
-4. Capture a screenshot showing the workflow name, run status and relevant job results.
-5. Save the image as `ci-workflow.png`.
-6. Place it in the repository at `docs/images/ci-workflow.png`.
-7. Commit and push the screenshot together with the README update.
-
-Only describe the workflow as successful when the actual run shows that the required jobs passed.
 
 ## 9. Demonstration Video
 
 The project demonstration video presents the RaceDay application, its main features, and the API testing process.
 
-**YouTube video:** [Watch the RaceDay Part 2 demonstration](YOUR_YOUTUBE_VIDEO_URL)
+**YouTube video:** [Watch the RaceDay Part 2 demonstration](https://youtu.be/zI2JAPMTP-U)
 
-Replace `YOUR_YOUTUBE_VIDEO_URL` with the actual YouTube link. Ensure the video is accessible to the person marking the assignment.
 
-The video should demonstrate the project structure, database, registration and login, authentication, role-based access, results endpoints, and relevant testing evidence.
 
 ## 10. Testing
 

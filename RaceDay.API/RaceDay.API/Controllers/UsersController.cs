@@ -18,15 +18,17 @@ namespace RaceDay.Controllers
         private readonly RaceDayContext _context;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly IConfiguration _configuration;
+        private readonly IWebHostEnvironment _environment;
 
         public UsersController(
     RaceDayContext context,
     IPasswordHasher<User> passwordHasher,
-    IConfiguration configuration)
+    IConfiguration configuration, IWebHostEnvironment environment)
         {
             _context = context;
             _passwordHasher = passwordHasher;
             _configuration = configuration;
+            _environment = environment;
         }
 
         [HttpGet]
@@ -191,6 +193,9 @@ namespace RaceDay.Controllers
                 email = User.Identity?.Name
             });
         }
+
+        
+
 
 
 
