@@ -29,3 +29,61 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+
+/* RaceDay Theme */
+
+body {
+    background-color: #f4f6fa;
+    color: #172033;
+    font-family: Arial, sans-serif;
+}
+
+.raceday-navbar {
+    background-color: #101b30;
+    padding: 15px 0;
+}
+
+.raceday-logo {
+    color: #ff8c32;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+    .nav-link:hover {
+        color: #ff8c32 !important;
+    }
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+    }
+
+.btn-primary {
+    background-color: #ff8c32;
+    border-color: #ff8c32;
+}
+
+    .btn-primary:hover {
+        background-color: #e8751d;
+        border-color: #e8751d;
+    }
+
+.raceday-footer {
+    background-color: #101b30;
+    color: white;
+    padding: 18px;
+    margin-top: 50px;
+}

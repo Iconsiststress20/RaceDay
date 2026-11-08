@@ -66,5 +66,16 @@ namespace RaceDay.Web.Controllers
             return RedirectToAction("Index", "Participant");
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+
+            return RedirectToAction("Login", "Account");
+        }
+
+
     }
 }

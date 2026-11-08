@@ -2,55 +2,64 @@
     ViewData["Title"] = "Organiser Dashboard";
 }
 
-<div class="container mt-4">
+<div class="container mt-5">
 
-    <h2 class="mb-2">Organiser Dashboard</h2>
-    <p class="text-muted">Welcome to RaceDay Event Management.</p>
-
-    <hr />
+    <div class="mb-5">
+        <h2 class="fw-bold">Organiser Dashboard</h2>
+        <p class="text-muted">Manage your sporting events from one place.</p>
+    </div>
 
     <div class="row g-4">
 
         <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-                <h4>Manage Events</h4>
+            <div class="card shadow-sm p-4 h-100">
+                <h4>🏁 Manage Events</h4>
                 <p>Create, update and manage your sporting events.</p>
-                <a href="#" class="btn btn-primary">View Events</a>
+                <a asp-controller="Events"
+                   asp-action="Index"
+                   class="btn btn-primary mt-auto">
+                    Manage Events
+                </a>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-                <h4>Categories</h4>
-                <p>Manage age groups and event distances.</p>
-                <a href="#" class="btn btn-primary">View Categories</a>
+            <div class="card shadow-sm p-4 h-100">
+                <h4>🏆 Categories</h4>
+                <p>Organise race distances and age groups.</p>
+                <a href="#" class="btn btn-primary mt-auto">Manage Categories</a>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-                <h4>Enrolments</h4>
+            <div class="card shadow-sm p-4 h-100">
+                <h4>👥 Enrolments</h4>
                 <p>View participants registered for your events.</p>
-                <a href="#" class="btn btn-primary">View Enrolments</a>
+                <a href="#" class="btn btn-primary mt-auto">View Enrolments</a>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-                <h4>Results</h4>
+            <div class="card shadow-sm p-4 h-100">
+                <h4>🥇 Results</h4>
                 <p>Record finishing times and race positions.</p>
-                <a href="#" class="btn btn-primary">Manage Results</a>
+                <a href="#" class="btn btn-primary mt-auto">Manage Results</a>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-                <h4>Profile</h4>
-                <p>View and update your organiser information.</p>
-                <a href="#" class="btn btn-primary">My Profile</a>
+            <div class="card shadow-sm p-4 h-100">
+                <h4>👤 My Profile</h4>
+                <p>Manage your organiser account information.</p>
+                <a href="#" class="btn btn-primary mt-auto">My Profile</a>
             </div>
         </div>
 
     </div>
+
+    <form asp-controller="Account" asp-action="Logout" method="post" class="mt-5">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
 
 </div>

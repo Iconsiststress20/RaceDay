@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RaceDay.Data;
+using RaceDay.Models;
 
 namespace RaceDay.Controllers
 {
@@ -39,6 +40,66 @@ namespace RaceDay.Controllers
                 .ToListAsync();
 
             return Ok(events);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateEvent(CreateEventRequest request)
+        {
+            var userId = int.Parse(
+                User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)!.Value
+            );
+
+            var organiser = await _context.Organisers
+                .FirstOrDefaultAsync(o => o.UserID == userId);
+
+            if (organiser == null)
+            {
+                return BadRequest(new
+                {
+                    message = "Organiser profile not found."
+                });
+            }
+
+            var environmentExists = await _context.EventEnvironments
+                .AnyAsync(e => e.EnvironmentID == request.EnvironmentID);
+
+            if (!environmentExists)
+            {
+                return BadRequest(new
+                {
+                    message = "Invalid event environment."
+                });
+            }
+
+            var newEvent = new RaceDay.Models.Event
+            {
+                OrganiserID = organiser.OrganiserID,
+                EnvironmentID = request.EnvironmentID,
+                EventName = request.EventName,
+                EventDescription = request.EventDescription,
+                EventDate = request.EventDate,
+                EventTime = request.EventTime,
+                Location = request.Location,
+                MaxParticipants = request.MaxParticipants,
+                EntryFee = request.EntryFee,
+                Status = request.Status,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            _context.Events.Add(newEvent);
+
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(
+                nameof(GetEvents),
+                new { id = newEvent.EventID },
+                new
+                {
+                    message = "Event created successfully.",
+                    newEvent.EventID,
+                    newEvent.EventName
+                }
+            );
         }
     }
 }
