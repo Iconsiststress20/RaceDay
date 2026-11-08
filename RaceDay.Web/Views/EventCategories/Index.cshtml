@@ -1,0 +1,87 @@
+﻿@model List<RaceDay.Web.Models.EventCategoryViewModel>
+
+@{
+    ViewData["Title"] = "Event Categories";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Manage Event Categories</h2>
+
+        <a asp-action="Create" class="btn btn-warning">
+            + Add Category
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            No event categories have been added yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-dark table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Distance (KM)</th>
+                        <th>Minimum Age</th>
+                        <th>Maximum Age</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var category in Model)
+                    {
+                        <tr>
+                            <td>@category.CategoryName</td>
+                            <td>@category.Description</td>
+                            <td>@category.DistanceKM</td>
+                            <td>@(category.MinAge?.ToString() ?? "-")</td>
+                            <td>@(category.MaxAge?.ToString() ?? "-")</td>
+                            <td>
+                                <a asp-action="Edit"
+                                   asp-route-id="@category.CategoryID"
+                                   class="btn btn-sm btn-primary">
+                                    Edit
+                                </a>
+
+                                <form asp-action="Delete"
+                                      asp-route-id="@category.CategoryID"
+                                      method="post"
+                                      class="d-inline"
+                                      onsubmit="return confirm('Delete this category?');">
+
+                                    @Html.AntiForgeryToken()
+
+                                    <button type="submit"
+                                            class="btn btn-sm btn-danger">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
