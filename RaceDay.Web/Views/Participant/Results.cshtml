@@ -1,0 +1,66 @@
+﻿@model List<RaceDay.Web.Models.ResultViewModel>
+
+@{
+    ViewData["Title"] = "My Results";
+}
+
+<div class="container mt-4">
+    <h2>My Race Results</h2>
+
+    <p class="text-muted">
+        View your finishing times, race positions and points.
+    </p>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Race Number</th>
+                        <th>Finish Time</th>
+                        <th>Overall Position</th>
+                        <th>Category Position</th>
+                        <th>Points</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var result in Model)
+                    {
+                        <tr>
+                            <td>@result.EventName</td>
+                            <td>@(result.RaceNumber?.ToString() ?? "-")</td>
+                            <td>@(result.FinishTime?.ToString(@"hh\:mm\:ss") ?? "-")</td>
+                            <td>@(result.OverallPosition?.ToString() ?? "-")</td>
+                            <td>@(result.CategoryPosition?.ToString() ?? "-")</td>
+                            <td>@(result.Points?.ToString() ?? "-")</td>
+                            <td>@(string.IsNullOrWhiteSpace(result.Remarks) ? "-" : result.Remarks)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            You do not have any race results available yet.
+        </div>
+    }
+
+    <a asp-controller="Participant"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to Dashboard
+    </a>
+</div>

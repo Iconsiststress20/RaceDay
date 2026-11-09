@@ -33,7 +33,11 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>🏆 My Results</h4>
                 <p>Check your finishing times and race positions.</p>
-                <a href="#" class="btn btn-primary mt-auto">View Results</a>
+                <a asp-controller="Participant"
+                   asp-action="Results"
+                   class="btn btn-primary mt-auto">
+                    View Results
+                </a>
             </div>
         </div>
 

@@ -22,6 +22,7 @@ C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\rjsmcsh
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\scopedcss\bundle\RaceDay.Web.styles.css
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\scopedcss\projectbundle\RaceDay.Web.bundle.scp.css
+C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\compressed\jnvmeyxtln-{0}-35z9c5nhc6-35z9c5nhc6.gz
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\compressed\67lx4z1uhj-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\compressed\oa14bi06zv-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\compressed\fn2mwovqvu-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -97,4 +98,3 @@ C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\RaceDay
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\RaceDay.Web.genruntimeconfig.cache
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\ref\RaceDay.Web.dll
 C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\RaceDay..034AC97B.Up2Date
-C:\Users\casey\OneDrive\Documentos\RaceDay\RaceDay.Web\obj\Debug\net10.0\compressed\jnvmeyxtln-{0}-35z9c5nhc6-35z9c5nhc6.gz

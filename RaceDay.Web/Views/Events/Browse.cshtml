@@ -1,0 +1,72 @@
+﻿@model List<RaceDay.Web.Models.EventViewModel>
+
+@{
+    ViewData["Title"] = "Browse Events";
+}
+
+<div class="container mt-4">
+    <h2>Upcoming Events</h2>
+    <p>Explore upcoming races and find an event to join.</p>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info">
+            No upcoming events are currently available.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5>@item.EventName</h5>
+
+                            <p>@item.EventDescription</p>
+
+                            <p>
+                                <strong>Date:</strong>
+                                @item.EventDate.ToString("dd MMM yyyy")
+                            </p>
+
+                            <p>
+                                <strong>Time:</strong>
+                                @item.EventTime
+                            </p>
+
+                            <p>
+                                <strong>Location:</strong>
+                                @item.Location
+                            </p>
+
+                            <p>
+                                <strong>Entry Fee:</strong>
+                                R @item.EntryFee.ToString("0.00")
+                            </p>
+
+                            <p>
+                                <strong>Maximum Participants:</strong>
+                                @item.MaxParticipants
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    <a asp-controller="Participant"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Back to Dashboard
+    </a>
+</div>

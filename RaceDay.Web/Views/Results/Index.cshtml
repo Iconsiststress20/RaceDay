@@ -1,0 +1,188 @@
+﻿@model List<RaceDay.Web.Models.ResultViewModel>
+
+@{
+    ViewData["Title"] = "Manage Results";
+
+    var availableEnrolments =
+        ViewBag.AvailableEnrolments as List<RaceDay.Web.Models.EnrolmentViewModel>
+        ?? new List<RaceDay.Web.Models.EnrolmentViewModel>();
+}
+
+<h2>Manage Race Results</h2>
+
+<p>Record and manage results for participants in your events.</p>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Error"]
+    </div>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<hr />
+
+<h4>Record a New Result</h4>
+
+@if (availableEnrolments.Any())
+{
+    <form asp-controller="Results" asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Participant and Event</label>
+
+                <select name="EnrollmentID" class="form-select" required>
+                    <option value="">Select an enrolment</option>
+
+                    @foreach (var enrolment in availableEnrolments)
+                    {
+                        <option value="@enrolment.EnrollmentID">
+                            @enrolment.ParticipantName -
+                            @enrolment.EventName
+                            (Race No: @(enrolment.RaceNumber?.ToString() ?? "Not assigned"))
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Finish Time</label>
+                <input type="time"
+                       name="FinishTime"
+                       step="1"
+                       class="form-control" />
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Overall Position</label>
+                <input type="number"
+                       name="OverallPosition"
+                       min="1"
+                       class="form-control" />
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Category Position</label>
+                <input type="number"
+                       name="CategoryPosition"
+                       min="1"
+                       class="form-control" />
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Points</label>
+                <input type="number"
+                       name="Points"
+                       min="0"
+                       class="form-control" />
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label class="form-label">Remarks</label>
+                <textarea name="Remarks"
+                          class="form-control"
+                          rows="2"
+                          maxlength="1000"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Record Result
+        </button>
+    </form>
+}
+else
+{
+    <p class="text-muted">
+        There are no enrolments available for new results.
+        An enrolment may already have a result recorded.
+    </p>
+}
+
+<hr />
+
+<h4>Existing Results</h4>
+
+@if (Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Participant</th>
+                    <th>Event</th>
+                    <th>Race Number</th>
+                    <th>Finish Time</th>
+                    <th>Overall Position</th>
+                    <th>Category Position</th>
+                    <th>Points</th>
+                    <th>Remarks</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var result in Model)
+                {
+                    <tr>
+                        <td>@result.ParticipantName</td>
+                        <td>@result.EventName</td>
+                        <td>@(result.RaceNumber?.ToString() ?? "-")</td>
+                        <td>@(result.FinishTime?.ToString(@"hh\:mm\:ss") ?? "-")</td>
+                        <td>@(result.OverallPosition?.ToString() ?? "-")</td>
+                        <td>@(result.CategoryPosition?.ToString() ?? "-")</td>
+                        <td>@(result.Points?.ToString() ?? "-")</td>
+                        <td>@(string.IsNullOrWhiteSpace(result.Remarks) ? "-" : result.Remarks)</td>
+                        <td>
+                            <a asp-controller="Results"
+                               asp-action="Edit"
+                               asp-route-id="@result.ResultID"
+                               class="btn btn-sm btn-warning mb-1">
+                                Edit
+                            </a>
+
+                            <form asp-controller="Results"
+                                  asp-action="Delete"
+                                  asp-route-id="@result.ResultID"
+                                  method="post"
+                                  onsubmit="return confirm('Are you sure you want to delete this result?');">
+
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit"
+                                        class="btn btn-sm btn-danger">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p class="text-muted">No results have been recorded yet.</p>
+}
+
+<a asp-controller="Organiser"
+   asp-action="Index"
+   class="btn btn-secondary">
+    Back to Dashboard
+</a>

@@ -27,7 +27,11 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>🏆 Categories</h4>
                 <p>Organise race distances and age groups.</p>
-                <a href="#" class="btn btn-primary mt-auto">Manage Categories</a>
+                <a asp-controller="EventCategories"
+                   asp-action="Index"
+                   class="btn btn-warning">
+                    Manage Categories
+                </a>
             </div>
         </div>
 
@@ -35,7 +39,11 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>👥 Enrolments</h4>
                 <p>View participants registered for your events.</p>
-                <a href="#" class="btn btn-primary mt-auto">View Enrolments</a>
+                <a asp-controller="Enrolments"
+                   asp-action="Index"
+                   class="btn btn-info">
+                    Manage Enrolments
+                </a>
             </div>
         </div>
 
@@ -43,7 +51,12 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>🥇 Results</h4>
                 <p>Record finishing times and race positions.</p>
-                <a href="#" class="btn btn-primary mt-auto">Manage Results</a>
+
+                <a asp-controller="Results"
+                   asp-action="Index"
+                   class="btn btn-primary">
+                    Manage Results
+                </a>
             </div>
         </div>
 

@@ -18,27 +18,64 @@ namespace RaceDay.Controllers
         {
             _context = context;
         }
+
+        private async Task<int?> GetOrganiserIdAsync()
+        {
+            var userIdValue = User.FindFirstValue(
+                ClaimTypes.NameIdentifier);
+
+            if (!int.TryParse(userIdValue, out var userId))
+            {
+                return null;
+            }
+
+            var organiser = await _context.Organisers
+                .FirstOrDefaultAsync(o => o.UserID == userId);
+
+            return organiser?.OrganiserID;
+        }
+
+        // ORGANISER: View results for their own events
         [Authorize(Roles = "Organiser")]
         [HttpGet]
         public async Task<IActionResult> GetResults()
         {
-            var results = await _context.Results
-                .Select(result => new
+            var organiserId = await GetOrganiserIdAsync();
+
+            if (organiserId == null)
+                return Unauthorized();
+
+            var results = await (
+                from result in _context.Results
+                join enrollment in _context.EventEnrollments
+                    on result.EnrollmentID equals enrollment.EnrollmentID
+                join ev in _context.Events
+                    on enrollment.EventID equals ev.EventID
+                join participant in _context.Participants
+                    on enrollment.ParticipantID equals participant.ParticipantID
+                join user in _context.Users
+                    on participant.UserID equals user.UserID
+                where ev.OrganiserID == organiserId
+                orderby ev.EventDate descending
+                select new
                 {
                     result.ResultID,
                     result.EnrollmentID,
+                    ev.EventName,
+                    ParticipantName = user.FirstName + " " + user.LastName,
+                    enrollment.RaceNumber,
                     result.FinishTime,
                     result.OverallPosition,
                     result.CategoryPosition,
                     result.Points,
                     result.Remarks,
                     result.RecordedAt
-                })
-                .ToListAsync();
+                }).ToListAsync();
 
             return Ok(results);
         }
 
+        // PARTICIPANT: View their own results
         [Authorize(Roles = "Participant")]
         [HttpGet("my-results")]
         public async Task<IActionResult> GetMyResults()
@@ -47,52 +84,77 @@ namespace RaceDay.Controllers
                 ClaimTypes.NameIdentifier);
 
             if (!int.TryParse(userIdValue, out var userId))
-            {
                 return Unauthorized();
-            }
 
-            var results = await _context.Results
-                .Where(result => _context.EventEnrollments.Any(enrollment =>
-                    enrollment.EnrollmentID == result.EnrollmentID &&
-                    _context.Participants.Any(participant =>
-                        participant.ParticipantID == enrollment.ParticipantID &&
-                        participant.UserID == userId)))
-                .Select(result => new
+            var results = await (
+                from result in _context.Results
+                join enrollment in _context.EventEnrollments
+                    on result.EnrollmentID equals enrollment.EnrollmentID
+                join ev in _context.Events
+                    on enrollment.EventID equals ev.EventID
+                where _context.Participants.Any(p =>
+                    p.ParticipantID == enrollment.ParticipantID &&
+                    p.UserID == userId)
+                select new
                 {
                     result.ResultID,
                     result.EnrollmentID,
+                    ev.EventName,
+                    enrollment.RaceNumber,
                     result.FinishTime,
                     result.OverallPosition,
                     result.CategoryPosition,
                     result.Points,
                     result.Remarks,
                     result.RecordedAt
-                })
-                .ToListAsync();
+                }).ToListAsync();
 
             return Ok(results);
         }
 
+        // ORGANISER: Add a result
         [Authorize(Roles = "Organiser")]
         [HttpPost]
         public async Task<IActionResult> CreateResult(
             CreateResultRequest request)
         {
-            var enrollmentExists = await _context.EventEnrollments
-                .AnyAsync(enrollment =>
-                    enrollment.EnrollmentID == request.EnrollmentID);
+            var organiserId = await GetOrganiserIdAsync();
 
-            if (!enrollmentExists)
+            if (organiserId == null)
+                return Unauthorized();
+
+            if (!IsValidResult(
+                request.FinishTime,
+                request.OverallPosition,
+                request.CategoryPosition,
+                request.Points))
+            {
+                return BadRequest(new
+                {
+                    message = "Check the finish time, positions and points. Positions must be positive and points cannot be negative."
+                });
+            }
+
+            var enrollment = await (
+                from e in _context.EventEnrollments
+                join ev in _context.Events
+                    on e.EventID equals ev.EventID
+                where e.EnrollmentID == request.EnrollmentID
+                    && ev.OrganiserID == organiserId
+                select e
+            ).FirstOrDefaultAsync();
+
+            if (enrollment == null)
             {
                 return NotFound(new
                 {
-                    message = "The event enrolment was not found."
+                    message = "The enrolment was not found or does not belong to your events."
                 });
             }
 
             var resultExists = await _context.Results
-                .AnyAsync(result =>
-                    result.EnrollmentID == request.EnrollmentID);
+                .AnyAsync(r =>
+                    r.EnrollmentID == request.EnrollmentID);
 
             if (resultExists)
             {
@@ -131,20 +193,46 @@ namespace RaceDay.Controllers
                 });
         }
 
+        // ORGANISER: Update a result
         [Authorize(Roles = "Organiser")]
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateResult(
             int id,
             UpdateResultRequest request)
         {
-            var result = await _context.Results
-                .FirstOrDefaultAsync(r => r.ResultID == id);
+            var organiserId = await GetOrganiserIdAsync();
+
+            if (organiserId == null)
+                return Unauthorized();
+
+            if (!IsValidResult(
+                request.FinishTime,
+                request.OverallPosition,
+                request.CategoryPosition,
+                request.Points))
+            {
+                return BadRequest(new
+                {
+                    message = "Check the finish time, positions and points. Positions must be positive and points cannot be negative."
+                });
+            }
+
+            var result = await (
+                from r in _context.Results
+                join enrollment in _context.EventEnrollments
+                    on r.EnrollmentID equals enrollment.EnrollmentID
+                join ev in _context.Events
+                    on enrollment.EventID equals ev.EventID
+                where r.ResultID == id
+                    && ev.OrganiserID == organiserId
+                select r
+            ).FirstOrDefaultAsync();
 
             if (result == null)
             {
                 return NotFound(new
                 {
-                    message = "The result was not found."
+                    message = "The result was not found or does not belong to your events."
                 });
             }
 
@@ -169,18 +257,32 @@ namespace RaceDay.Controllers
             });
         }
 
+        // ORGANISER: Delete a result
         [Authorize(Roles = "Organiser")]
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteResult(int id)
         {
-            var result = await _context.Results
-                .FirstOrDefaultAsync(r => r.ResultID == id);
+            var organiserId = await GetOrganiserIdAsync();
+
+            if (organiserId == null)
+                return Unauthorized();
+
+            var result = await (
+                from r in _context.Results
+                join enrollment in _context.EventEnrollments
+                    on r.EnrollmentID equals enrollment.EnrollmentID
+                join ev in _context.Events
+                    on enrollment.EventID equals ev.EventID
+                where r.ResultID == id
+                    && ev.OrganiserID == organiserId
+                select r
+            ).FirstOrDefaultAsync();
 
             if (result == null)
             {
                 return NotFound(new
                 {
-                    message = "The result was not found."
+                    message = "The result was not found or does not belong to your events."
                 });
             }
 
@@ -190,7 +292,36 @@ namespace RaceDay.Controllers
             return NoContent();
         }
 
+        private bool IsValidResult(
+            TimeSpan? finishTime,
+            int? overallPosition,
+            int? categoryPosition,
+            int? points)
+        {
+            return
+                (!finishTime.HasValue || finishTime.Value >= TimeSpan.Zero) &&
+                (!overallPosition.HasValue || overallPosition.Value > 0) &&
+                (!categoryPosition.HasValue || categoryPosition.Value > 0) &&
+                (!points.HasValue || points.Value >= 0);
+        }
+    }
 
+    public class CreateResultRequest
+    {
+        public int EnrollmentID { get; set; }
+        public TimeSpan? FinishTime { get; set; }
+        public int? OverallPosition { get; set; }
+        public int? CategoryPosition { get; set; }
+        public int? Points { get; set; }
+        public string? Remarks { get; set; }
+    }
 
+    public class UpdateResultRequest
+    {
+        public TimeSpan? FinishTime { get; set; }
+        public int? OverallPosition { get; set; }
+        public int? CategoryPosition { get; set; }
+        public int? Points { get; set; }
+        public string? Remarks { get; set; }
     }
 }

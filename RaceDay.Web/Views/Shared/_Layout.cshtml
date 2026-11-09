@@ -1,9 +1,16 @@
-﻿
+﻿@using Microsoft.AspNetCore.Http
+
+@{
+    var userRole = Context.Session.GetString("UserRole");
+    var isLoggedIn = !string.IsNullOrEmpty(userRole);
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>@ViewData["Title"] - RaceDay</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -15,7 +22,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark raceday-navbar">
         <div class="container">
 
-            <a class="navbar-brand fw-bold" asp-controller="Account" asp-action="Login">
+            <a class="navbar-brand fw-bold"
+               asp-controller="@(userRole == "Organiser" ? "Organiser" : userRole == "Participant" ? "Participant" : "Account")"
+               asp-action="Index">
                 <span class="raceday-logo">RACE</span>DAY
             </a>
 
@@ -27,14 +36,87 @@
 
             <div class="collapse navbar-collapse" id="racedayNav">
 
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">
-                            Home
-                        </a>
-                    </li>
-                </ul>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
 
+                    @if (userRole == "Organiser")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Organiser"
+                               asp-action="Index">Dashboard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Events"
+                               asp-action="Index">Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Categories"
+                               asp-action="Index">Categories</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Enrolments"
+                               asp-action="Index">Enrolments</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Results"
+                               asp-action="Index">Results</a>
+                        </li>
+                    }
+                    else if (userRole == "Participant")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Participant"
+                               asp-action="Index">Dashboard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Events"
+                               asp-action="Index">Browse Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Participant"
+                               asp-action="Results">My Results</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="Account"
+                               asp-action="Login">Login</a>
+                        </li>
+                    }
+
+                    @if (isLoggedIn)
+                    {
+                        <li class="nav-item ms-lg-3">
+                            <form asp-controller="Account"
+                                  asp-action="Logout"
+                                  method="post">
+
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit"
+                                        class="btn btn-danger btn-sm">
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                    }
+
+                </ul>
             </div>
         </div>
     </nav>

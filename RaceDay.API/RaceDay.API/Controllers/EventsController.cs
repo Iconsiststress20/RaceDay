@@ -6,7 +6,7 @@ using RaceDay.Models;
 
 namespace RaceDay.Controllers
 {
-    [Authorize(Roles = "Organiser")]
+
     [ApiController]
     [Route("api/[controller]")]
     public class EventsController : ControllerBase
@@ -19,6 +19,7 @@ namespace RaceDay.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Organiser,Participant")]
         public async Task<IActionResult> GetEvents()
         {
             var events = await _context.Events
@@ -43,6 +44,7 @@ namespace RaceDay.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Organiser")]
         public async Task<IActionResult> CreateEvent(CreateEventRequest request)
         {
             var userId = int.Parse(
@@ -103,6 +105,7 @@ namespace RaceDay.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Organiser")]
         public async Task<IActionResult> UpdateEvent(
     int id, UpdateEventRequest request)
         {
@@ -164,6 +167,7 @@ namespace RaceDay.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Organiser")]
         public async Task<IActionResult> DeleteEvent(int id)
         {
             var userId = int.Parse(

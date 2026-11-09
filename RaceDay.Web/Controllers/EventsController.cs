@@ -320,5 +320,70 @@ namespace RaceDay.Web.Controllers
 
             return RedirectToAction("Index");
         }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Browse(
+            string? search,
+            DateTime? eventDate)
+        {
+            var token = HttpContext.Session.GetString("JWToken");
+
+            if (string.IsNullOrEmpty(token) ||
+                HttpContext.Session.GetString("UserRole") != "Participant")
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var client = _httpClientFactory.CreateClient("RaceDayAPI");
+
+            client.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+
+            var response = await client.GetAsync("api/Events");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.Error = "Unable to load upcoming events.";
+                return View(new List<EventViewModel>());
+            }
+
+            var events = await response.Content
+                .ReadFromJsonAsync<List<EventViewModel>>();
+
+            var upcomingEvents = events?
+                .Where(e => e.EventDate.Date >= DateTime.Today &&
+                            e.Status.Equals("Upcoming",
+                                StringComparison.OrdinalIgnoreCase))
+                .ToList() ?? new List<EventViewModel>();
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                upcomingEvents = upcomingEvents
+                    .Where(e =>
+                        e.EventName.Contains(search,
+                            StringComparison.OrdinalIgnoreCase) ||
+                        e.Location.Contains(search,
+                            StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+            }
+
+            if (eventDate.HasValue)
+            {
+                upcomingEvents = upcomingEvents
+                    .Where(e => e.EventDate.Date == eventDate.Value.Date)
+                    .ToList();
+            }
+
+            ViewBag.Search = search;
+            ViewBag.EventDate = eventDate?.ToString("yyyy-MM-dd");
+
+            return View(upcomingEvents
+                .OrderBy(e => e.EventDate)
+                .ToList());
+        }
+
+
     }
 }

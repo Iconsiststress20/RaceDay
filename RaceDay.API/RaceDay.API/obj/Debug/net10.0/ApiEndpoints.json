@@ -73,6 +73,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RaceDay.Controllers.EventEnrollmentsController",
+    "Method": "UpdateEventEnrollment",
+    "RelativePath": "api/EventEnrollments/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "UpdateEventEnrollmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RaceDay.Controllers.EventEnvironmentsController",
     "Method": "GetEventEnvironments",
     "RelativePath": "api/EventEnvironments",
@@ -201,7 +222,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RaceDay.Models.CreateResultRequest",
+        "Type": "RaceDay.Controllers.CreateResultRequest",
         "IsRequired": true
       }
     ],
@@ -222,7 +243,7 @@
       },
       {
         "Name": "request",
-        "Type": "RaceDay.Models.UpdateResultRequest",
+        "Type": "RaceDay.Controllers.UpdateResultRequest",
         "IsRequired": true
       }
     ],
