@@ -193,6 +193,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RaceDay.Controllers.ParticipantEnrollmentsController",
+    "Method": "GetMyEnrollments",
+    "RelativePath": "api/ParticipantEnrollments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.ParticipantEnrollmentsController",
+    "Method": "Enrol",
+    "RelativePath": "api/ParticipantEnrollments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RaceDay.Controllers.CreateParticipantEnrollmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RaceDay.Controllers.ParticipantsController",
     "Method": "GetParticipants",
     "RelativePath": "api/Participants",
@@ -312,6 +338,48 @@
       {
         "Name": "request",
         "Type": "RaceDay.Models.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.UsersController",
+    "Method": "GetMyProfile",
+    "RelativePath": "api/Users/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.UsersController",
+    "Method": "UpdateMyProfile",
+    "RelativePath": "api/Users/me",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RaceDay.Controllers.UpdateMyProfileRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.UsersController",
+    "Method": "UpdateProfilePicture",
+    "RelativePath": "api/Users/me/profile-picture",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RaceDay.Controllers.UpdateProfilePictureRequest",
         "IsRequired": true
       }
     ],

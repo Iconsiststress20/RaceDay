@@ -1,0 +1,68 @@
+﻿@model RaceDay.Web.Controllers.ProfileViewModel
+
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<div class="container mt-4">
+    <div class="card shadow p-4">
+        <h2>My Profile</h2>
+
+        @if (Model?.ProfilePictureBlobName != null)
+        {
+            <img src="@Url.Action("Picture", "Profile")"
+                 alt="Profile picture"
+                 class="rounded-circle mb-3"
+                 style="width:150px;height:150px;object-fit:cover;" />
+        }
+        else
+        {
+            <p class="text-muted">No profile picture uploaded yet.</p>
+        }
+
+        <form asp-controller="Profile"
+              asp-action="UploadPicture"
+              method="post"
+              enctype="multipart/form-data">
+
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label class="form-label">Upload Profile Picture</label>
+                <input type="file"
+                       name="Picture"
+                       class="form-control"
+                       accept=".jpg,.jpeg,.png"
+                       required />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Upload Picture
+            </button>
+        </form>
+
+        <p class="text-muted">View your personal account information.</p>
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+
+        @if (Model != null)
+        {
+            <hr />
+
+            <p><strong>First Name:</strong> @Model.FirstName</p>
+            <p><strong>Last Name:</strong> @Model.LastName</p>
+            <p><strong>Email:</strong> @Model.Email</p>
+            <p><strong>Phone Number:</strong> @(Model.PhoneNumber ?? "Not provided")</p>
+            <p><strong>Account Role:</strong> @Model.Role</p>
+        }
+
+        <a asp-controller="Participant"
+           asp-action="Index"
+           class="btn btn-secondary mt-3">
+            Back to Dashboard
+        </a>
+    </div>
+</div>

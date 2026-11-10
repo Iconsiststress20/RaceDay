@@ -2,7 +2,11 @@
 
 @{
     var userRole = Context.Session.GetString("UserRole");
+    var userName = Context.Session.GetString("UserName") ?? "User";
     var isLoggedIn = !string.IsNullOrEmpty(userRole);
+    var userInitial = !string.IsNullOrWhiteSpace(userName)
+        ? userName.Substring(0, 1).ToUpper()
+        : "U";
 }
 
 <!DOCTYPE html>
@@ -15,6 +19,139 @@
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+            :root {
+                --race-navy: #101d35;
+                --race-blue: #1c3153;
+                --race-orange: #ff7626;
+                --race-light: #f4f7fb;
+            }
+
+            body {
+                background: var(--race-light);
+                color: #263449;
+                font-family: "Segoe UI", Arial, sans-serif;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .raceday-navbar {
+                background: var(--race-navy);
+                padding: 13px 0;
+                box-shadow: 0 3px 15px rgba(0,0,0,.12);
+            }
+
+            .navbar-brand {
+                font-size: 25px;
+                letter-spacing: 1px;
+                color: white !important;
+            }
+
+            .raceday-logo {
+                color: var(--race-orange);
+            }
+
+            .raceday-navbar .nav-link {
+                color: #dce5f2 !important;
+                font-weight: 500;
+                padding: 10px 13px !important;
+                transition: .2s;
+            }
+
+                .raceday-navbar .nav-link:hover {
+                    color: var(--race-orange) !important;
+                }
+
+            .raceday-avatar {
+                width: 39px;
+                height: 39px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid var(--race-orange);
+            }
+
+            .raceday-avatar-fallback {
+                width: 39px;
+                height: 39px;
+                border-radius: 50%;
+                background: var(--race-orange);
+                color: white;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 17px;
+            }
+
+            .raceday-account {
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 9px;
+                text-decoration: none;
+                padding: 5px 10px;
+                border-radius: 25px;
+            }
+
+                .raceday-account:hover {
+                    background: var(--race-blue);
+                    color: white;
+                }
+
+            .raceday-dropdown {
+                border: none;
+                border-radius: 12px;
+                padding: 9px;
+                box-shadow: 0 8px 25px rgba(0,0,0,.15);
+            }
+
+                .raceday-dropdown .dropdown-item {
+                    padding: 9px 12px;
+                    border-radius: 7px;
+                }
+
+                    .raceday-dropdown .dropdown-item:hover {
+                        background: var(--race-light);
+                    }
+
+            main {
+                flex: 1;
+                padding-bottom: 35px;
+            }
+
+            .raceday-footer {
+                background: var(--race-navy);
+                color: #cbd5e1;
+                padding: 19px 10px;
+                margin-top: 35px;
+            }
+
+                .raceday-footer p {
+                    margin: 0;
+                    font-size: 14px;
+                }
+
+            .btn-raceday {
+                background: var(--race-orange);
+                color: white;
+                border: none;
+                font-weight: 600;
+            }
+
+                .btn-raceday:hover {
+                    background: #e96318;
+                    color: white;
+                }
+
+            @@media (max-width: 991px) {
+    .raceday-account {
+        margin-top: 12px;
+    }
+}
+            }
+    </style>
 </head>
 
 <body>
@@ -30,7 +167,10 @@
 
             <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#racedayNav">
+                    data-bs-target="#racedayNav"
+                    aria-controls="racedayNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -81,7 +221,13 @@
                         <li class="nav-item">
                             <a class="nav-link"
                                asp-controller="Events"
-                               asp-action="Index">Browse Events</a>
+                               asp-action="Browse">Browse Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-controller="ParticipantEnrollments"
+                               asp-action="Index">My Enrolments</a>
                         </li>
 
                         <li class="nav-item">
@@ -101,18 +247,59 @@
 
                     @if (isLoggedIn)
                     {
-                        <li class="nav-item ms-lg-3">
-                            <form asp-controller="Account"
-                                  asp-action="Logout"
-                                  method="post">
+                        <li class="nav-item dropdown ms-lg-3">
 
-                                @Html.AntiForgeryToken()
+                            <a class="raceday-account dropdown-toggle"
+                               href="#"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
 
-                                <button type="submit"
-                                        class="btn btn-danger btn-sm">
-                                    Logout
-                                </button>
-                            </form>
+                                <img src="@Url.Action("Picture", "Profile")"
+                                     alt="Profile picture"
+                                     class="raceday-avatar"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+
+                                <span class="raceday-avatar-fallback">
+                                    @userInitial
+                                </span>
+
+                                <span>@userName</span>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end raceday-dropdown">
+
+                                <li>
+                                    <span class="dropdown-item-text text-muted small">
+                                        Logged in as @userRole
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       asp-controller="Profile"
+                                       asp-action="Index">
+                                        👤 My Profile
+                                    </a>
+                                </li>
+
+                                <li><hr class="dropdown-divider" /></li>
+
+                                <li>
+                                    <form asp-controller="Account"
+                                          asp-action="Logout"
+                                          method="post">
+
+                                        @Html.AntiForgeryToken()
+
+                                        <button type="submit"
+                                                class="dropdown-item text-danger">
+                                            ↪ Logout
+                                        </button>
+                                    </form>
+                                </li>
+
+                            </ul>
                         </li>
                     }
 

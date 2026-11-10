@@ -5,8 +5,40 @@
 }
 
 <div class="container mt-4">
+
     <h2>Upcoming Events</h2>
     <p>Explore upcoming races and find an event to join.</p>
+
+    <form asp-controller="Events"
+          asp-action="Browse"
+          method="get"
+          class="row g-3 mb-4">
+
+        <div class="col-md-5">
+            <input type="text"
+                   name="search"
+                   value="@ViewBag.Search"
+                   class="form-control"
+                   placeholder="Search event name or location" />
+        </div>
+
+        <div class="col-md-4">
+            <input type="date"
+                   name="eventDate"
+                   value="@ViewBag.EventDate"
+                   class="form-control" />
+        </div>
+
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary">
+                Search
+            </button>
+
+            <a asp-action="Browse" class="btn btn-secondary">
+                Clear
+            </a>
+        </div>
+    </form>
 
     @if (ViewBag.Error != null)
     {
@@ -18,17 +50,21 @@
     @if (Model == null || !Model.Any())
     {
         <div class="alert alert-info">
-            No upcoming events are currently available.
+            No upcoming events match your search.
         </div>
     }
     else
     {
         <div class="row">
+
             @foreach (var item in Model)
             {
                 <div class="col-md-4 mb-4">
+
                     <div class="card shadow-sm h-100">
+
                         <div class="card-body">
+
                             <h5>@item.EventName</h5>
 
                             <p>@item.EventDescription</p>
@@ -57,10 +93,27 @@
                                 <strong>Maximum Participants:</strong>
                                 @item.MaxParticipants
                             </p>
+
+                            <a asp-controller="Events"
+                               asp-action="Details"
+                               asp-route-id="@item.EventID"
+                               class="btn btn-primary">
+                                View Details
+                            </a>
+
+                            <a asp-controller="ParticipantEnrollments"
+                               asp-action="Enrol"
+                               asp-route-eventId="@item.EventID"
+                               class="btn btn-success">
+                                Enrol Now
+                            </a>
                         </div>
+
                     </div>
+
                 </div>
             }
+
         </div>
     }
 
@@ -69,4 +122,5 @@
        class="btn btn-secondary">
         Back to Dashboard
     </a>
+
 </div>

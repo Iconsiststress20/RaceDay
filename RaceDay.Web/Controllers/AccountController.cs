@@ -67,6 +67,59 @@ namespace RaceDay.Web.Controllers
         }
 
 
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var client = _httpClientFactory.CreateClient("RaceDayAPI");
+
+            var registrationData = new
+            {
+                model.FirstName,
+                model.LastName,
+                model.Email,
+                model.Password,
+                model.PhoneNumber
+            };
+
+            var response = await client.PostAsJsonAsync(
+                "api/Users/register", registrationData);
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["Success"] =
+                    "Your Participant account has been created. You can now log in.";
+
+                return RedirectToAction("Login");
+            }
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                ModelState.AddModelError(
+                    "Email",
+                    "An account with this email already exists.");
+            }
+            else
+            {
+                ModelState.AddModelError(
+                    string.Empty,
+                    "Registration failed. Please try again.");
+            }
+
+            return View(model);
+        }
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Logout()

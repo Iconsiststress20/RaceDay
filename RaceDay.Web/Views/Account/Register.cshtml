@@ -1,0 +1,118 @@
+﻿@model RaceDay.Web.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Create Account";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6">
+            <div class="card border-0 shadow-lg rounded-4">
+                <div class="card-body p-4 p-md-5">
+
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Join RaceDay</h2>
+                        <p class="text-muted">
+                            Create your Participant account to start entering events.
+                        </p>
+                    </div>
+
+                    <form asp-action="Register" method="post">
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-3"></div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="FirstName" class="form-label">
+                                    First Name
+                                </label>
+                                <input asp-for="FirstName"
+                                       class="form-control"
+                                       placeholder="Enter first name" />
+                                <span asp-validation-for="FirstName"
+                                      class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="LastName" class="form-label">
+                                    Last Name
+                                </label>
+                                <input asp-for="LastName"
+                                       class="form-control"
+                                       placeholder="Enter last name" />
+                                <span asp-validation-for="LastName"
+                                      class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">
+                                Email Address
+                            </label>
+                            <input asp-for="Email"
+                                   class="form-control"
+                                   placeholder="example@email.com" />
+                            <span asp-validation-for="Email"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PhoneNumber" class="form-label">
+                                Phone Number (Optional)
+                            </label>
+                            <input asp-for="PhoneNumber"
+                                   class="form-control"
+                                   placeholder="Enter phone number" />
+                            <span asp-validation-for="PhoneNumber"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label">
+                                Password
+                            </label>
+                            <input asp-for="Password"
+                                   class="form-control"
+                                   placeholder="At least 12 characters" />
+                            <span asp-validation-for="Password"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="ConfirmPassword" class="form-label">
+                                Confirm Password
+                            </label>
+                            <input asp-for="ConfirmPassword"
+                                   class="form-control"
+                                   placeholder="Enter password again" />
+                            <span asp-validation-for="ConfirmPassword"
+                                  class="text-danger"></span>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-warning w-100 fw-bold py-2">
+                            Create Participant Account
+                        </button>
+
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <span class="text-muted">
+                            Already have an account?
+                        </span>
+                        <a asp-action="Login"
+                           class="fw-bold text-decoration-none">
+                            Log in
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

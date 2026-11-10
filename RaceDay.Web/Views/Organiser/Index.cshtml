@@ -2,77 +2,268 @@
     ViewData["Title"] = "Organiser Dashboard";
 }
 
-<div class="container mt-5">
+<style>
+    .organiser-hero {
+        background: linear-gradient(120deg, #101d35, #263f66);
+        color: white;
+        border-radius: 18px;
+        padding: 40px;
+        margin-bottom: 35px;
+        position: relative;
+        overflow: hidden;
+    }
 
-    <div class="mb-5">
-        <h2 class="fw-bold">Organiser Dashboard</h2>
-        <p class="text-muted">Manage your sporting events from one place.</p>
+        .organiser-hero h2 {
+            font-weight: 750;
+            font-size: 30px;
+        }
+
+        .organiser-hero p {
+            color: #d4deec;
+            margin-bottom: 0;
+        }
+
+    .dashboard-label {
+        color: #ff7626;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .organiser-card {
+        background: white;
+        border: 1px solid #e8edf4;
+        border-radius: 15px;
+        padding: 25px;
+        height: 100%;
+        box-shadow: 0 5px 18px rgba(16, 29, 53, .05);
+        transition: transform .2s, box-shadow .2s;
+    }
+
+        .organiser-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(16, 29, 53, .10);
+        }
+
+    .organiser-icon {
+        width: 53px;
+        height: 53px;
+        border-radius: 13px;
+        background: #fff0e7;
+        color: #ff7626;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .organiser-card h5 {
+        color: #101d35;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .organiser-card p {
+        color: #718096;
+        font-size: 14px;
+        min-height: 42px;
+    }
+
+    .organiser-card .btn {
+        border-radius: 8px;
+        font-weight: 600;
+        padding: 10px 15px;
+    }
+
+    .btn-organiser {
+        background: #ff7626;
+        color: white;
+        border: none;
+    }
+
+        .btn-organiser:hover {
+            background: #e96318;
+            color: white;
+        }
+
+    .dashboard-section-title {
+        color: #101d35;
+        font-weight: 750;
+        margin-bottom: 22px;
+    }
+
+    .organiser-bottom {
+        background: #eaf0f8;
+        border-radius: 13px;
+        padding: 22px;
+        margin-top: 30px;
+    }
+</style>
+
+<div class="container py-4">
+
+    <!-- Welcome Section -->
+    <div class="organiser-hero">
+
+        <div class="dashboard-label">RACEDAY MANAGEMENT</div>
+
+        <h2>Welcome to your Dashboard 🏁</h2>
+
+        <p>
+            Manage your sporting events, participants, enrolments
+            and race results from one place.
+        </p>
+
     </div>
 
+    <!-- Dashboard Heading -->
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+
+        <div>
+            <h4 class="dashboard-section-title mb-1">
+                Management Centre
+            </h4>
+
+            <p class="text-muted small mb-0">
+                Select an area to manage your RaceDay activities.
+            </p>
+        </div>
+
+        <span class="badge rounded-pill px-3 py-2"
+              style="background:#e5f5ec;color:#198754;">
+            ● Organiser Account
+        </span>
+
+    </div>
+
+    <!-- Management Cards -->
     <div class="row g-4">
 
-        <div class="col-md-4">
-            <div class="card shadow-sm p-4 h-100">
-                <h4>🏁 Manage Events</h4>
-                <p>Create, update and manage your sporting events.</p>
+        <!-- Events -->
+        <div class="col-md-6 col-lg-4">
+            <div class="organiser-card">
+
+                <div class="organiser-icon">🏁</div>
+
+                <h5>Manage Events</h5>
+
+                <p>
+                    Create, update and manage your sporting events.
+                </p>
+
                 <a asp-controller="Events"
                    asp-action="Index"
-                   class="btn btn-primary mt-auto">
-                    Manage Events
+                   class="btn btn-organiser w-100">
+                    Manage Events →
                 </a>
+
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow-sm p-4 h-100">
-                <h4>🏆 Categories</h4>
-                <p>Organise race distances and age groups.</p>
+        <!-- Categories -->
+        <div class="col-md-6 col-lg-4">
+            <div class="organiser-card">
+
+                <div class="organiser-icon">🏆</div>
+
+                <h5>Event Categories</h5>
+
+                <p>
+                    Organise race distances and participant age groups.
+                </p>
+
                 <a asp-controller="EventCategories"
                    asp-action="Index"
-                   class="btn btn-warning">
-                    Manage Categories
+                   class="btn btn-organiser w-100">
+                    Manage Categories →
                 </a>
+
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow-sm p-4 h-100">
-                <h4>👥 Enrolments</h4>
-                <p>View participants registered for your events.</p>
+        <!-- Enrolments -->
+        <div class="col-md-6 col-lg-4">
+            <div class="organiser-card">
+
+                <div class="organiser-icon">👥</div>
+
+                <h5>Enrolments</h5>
+
+                <p>
+                    View participants registered for your events
+                    and manage their entries.
+                </p>
+
                 <a asp-controller="Enrolments"
                    asp-action="Index"
-                   class="btn btn-info">
-                    Manage Enrolments
+                   class="btn btn-organiser w-100">
+                    Manage Enrolments →
                 </a>
+
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow-sm p-4 h-100">
-                <h4>🥇 Results</h4>
-                <p>Record finishing times and race positions.</p>
+        <!-- Results -->
+        <div class="col-md-6 col-lg-4">
+            <div class="organiser-card">
+
+                <div class="organiser-icon">🥇</div>
+
+                <h5>Race Results</h5>
+
+                <p>
+                    Record finishing times, race positions
+                    and participant performance.
+                </p>
 
                 <a asp-controller="Results"
                    asp-action="Index"
-                   class="btn btn-primary">
-                    Manage Results
+                   class="btn btn-organiser w-100">
+                    Manage Results →
                 </a>
+
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow-sm p-4 h-100">
-                <h4>👤 My Profile</h4>
-                <p>Manage your organiser account information.</p>
-                <a href="#" class="btn btn-primary mt-auto">My Profile</a>
+        <!-- Profile -->
+        <div class="col-md-6 col-lg-4">
+            <div class="organiser-card">
+
+                <div class="organiser-icon">👤</div>
+
+                <h5>My Profile</h5>
+
+                <p>
+                    View and update your organiser account
+                    information.
+                </p>
+
+                <a asp-controller="Profile"
+                   asp-action="Index"
+                   class="btn btn-organiser w-100">
+                    View My Profile →
+                </a>
+
             </div>
         </div>
 
     </div>
 
-    <form asp-controller="Account" asp-action="Logout" method="post" class="mt-5">
-        @Html.AntiForgeryToken()
-        <button type="submit" class="btn btn-danger">Logout</button>
-    </form>
+    <!-- Bottom Information -->
+    <div class="organiser-bottom">
+
+        <h6 class="fw-bold mb-2" style="color:#101d35;">
+            Every Race Has a Story.
+        </h6>
+
+        <p class="text-muted small mb-0">
+            Thank you for using RaceDay to organise and manage
+            sporting events. Keep your events running smoothly!
+        </p>
+
+    </div>
 
 </div>

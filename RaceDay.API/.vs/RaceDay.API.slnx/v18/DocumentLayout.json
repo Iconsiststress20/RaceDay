@@ -3,20 +3,97 @@
   "WorkspaceRootPath": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\events\\browse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\models\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\models\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\organiser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\participant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\profilepictureviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\casey\\AppData\\Roaming\\Microsoft\\UserSecrets\\c402411e-6136-4a3d-bd14-107a34f33dfd\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\raceday.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\profile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\editprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\events\\browse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\participantenrollments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\participantenrollments\\enrol.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\participantenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\participantenrollmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\eventcategoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\participantenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\participantenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\eventcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\eventenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\events\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\participant\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
@@ -28,16 +105,10 @@
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\participant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\results\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\organiser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\resultscontrller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -75,23 +146,12 @@
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\enrolments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\eventenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\raceday.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\raceday.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\raceday.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\data\\racedaycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\data\\racedaycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\models\\organiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,9 +165,6 @@
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\controllers\\eventcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\eventcategories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -115,13 +172,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\eventcategories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\eventcategoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\controllers\\eventcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\models\\eventcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -154,9 +204,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4ED8809-D00C-4224-B0B4-5F1E957094D3}|..\\RaceDay.Web\\RaceDay.Web.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.web\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -197,10 +244,6 @@
       "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\models\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\models\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\casey\\onedrive\\documentos\\raceday\\raceday.api\\raceday.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -232,20 +275,382 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAiwHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T20:24:22.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\RegisterViewModel.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Models\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T20:19:44.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T09:25:42.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAiwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-08T04:23:14.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-08T09:30:03.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAiwA0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-08T04:16:55.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-08T03:52:30.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T09:44:40.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAcwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T03:26:29.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "RaceDay.API\\Models\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\RegisterRequest.cs",
+              "RelativeToolTip": "RaceDay.API\\Models\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T13:10:25.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfilePictureViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\ProfilePictureViewModel.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\ProfilePictureViewModel.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\ProfilePictureViewModel.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Models\\ProfilePictureViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T14:02:02.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\casey\\AppData\\Roaming\\Microsoft\\UserSecrets\\c402411e-6136-4a3d-bd14-107a34f33dfd\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\c402411e-6136-4a3d-bd14-107a34f33dfd\\secrets.json",
+              "ToolTip": "C:\\Users\\casey\\AppData\\Roaming\\Microsoft\\UserSecrets\\c402411e-6136-4a3d-bd14-107a34f33dfd\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\c402411e-6136-4a3d-bd14-107a34f33dfd\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-09T12:59:38.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Profile\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Profile\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Profile\\Edit.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Profile\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T09:56:40.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EditProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EditProfileViewModel.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\EditProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EditProfileViewModel.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Models\\EditProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T09:53:15.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Program.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Program.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T03:15:51.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\ParticipantEnrollments\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\ParticipantEnrollments\\Index.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\ParticipantEnrollments\\Index.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\ParticipantEnrollments\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T08:55:53.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RaceDay.Web.csproj",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\RaceDay.Web.csproj",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\RaceDay.Web.csproj",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\RaceDay.Web.csproj",
+              "RelativeToolTip": "..\\RaceDay.Web\\RaceDay.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-08T04:05:01.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Enrol.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\ParticipantEnrollments\\Enrol.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\ParticipantEnrollments\\Enrol.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\ParticipantEnrollments\\Enrol.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\ParticipantEnrollments\\Enrol.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T08:54:43.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "RaceDay.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T11:24:39.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ParticipantEnrollmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\ParticipantEnrollmentsController.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\ParticipantEnrollmentsController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\ParticipantEnrollmentsController.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Controllers\\ParticipantEnrollmentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T08:52:56.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ParticipantEnrollmentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\ParticipantEnrollmentViewModel.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\ParticipantEnrollmentViewModel.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\ParticipantEnrollmentViewModel.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Models\\ParticipantEnrollmentViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T08:49:20.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ParticipantEnrollmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\ParticipantEnrollmentsController.cs",
+              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\ParticipantEnrollmentsController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\ParticipantEnrollmentsController.cs",
+              "RelativeToolTip": "RaceDay.API\\Controllers\\ParticipantEnrollmentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T08:47:08.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Browse.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Events\\Browse.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Events\\Browse.cshtml",
               "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Events\\Browse.cshtml",
               "RelativeToolTip": "..\\RaceDay.Web\\Views\\Events\\Browse.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAswCoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAGwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-09T01:12:41.944Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Events\\Details.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Events\\Details.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Events\\Details.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Events\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T08:24:00.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "RaceDay.API\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T12:22:43.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EventCategoryViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
+              "RelativeToolTip": "..\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T18:24:42.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "EventEnrollmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
+              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
+              "RelativeToolTip": "RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAANQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T12:42:33.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EventCategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventCategoriesController.cs",
+              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventCategoriesController.cs",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventCategoriesController.cs",
+              "RelativeToolTip": "RaceDay.API\\Controllers\\EventCategoriesController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowGUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T23:11:52.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Results.cshtml",
+              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
+              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
+              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
+              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswEAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-08T23:20:37.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "Events.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\Events.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\Events.cs",
@@ -257,72 +662,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Results.cshtml",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
-              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Participant\\Results.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswEAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T23:20:37.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T09:30:03.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "..\\RaceDay.Web\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAIA+wCIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T03:26:29.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "RaceDay.API\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T12:22:43.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 27,
               "Title": "EventsController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\EventsController.cs",
               "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\EventsController.cs",
               "RelativeToolTip": "..\\RaceDay.Web\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAAE0BAAAAAAAAAAAswGEBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHMBAAAAAAAAAAAiwKMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-08T17:01:11.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 32,
               "Title": "ParticipantController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\ParticipantController.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\ParticipantController.cs",
@@ -334,20 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
-              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Participant\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T04:23:14.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 35,
               "Title": "ResultViewModel.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\ResultViewModel.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\ResultViewModel.cs",
@@ -359,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 30,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Results\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Results\\Index.cshtml",
@@ -367,12 +707,11 @@
               "RelativeToolTip": "..\\RaceDay.Web\\Views\\Results\\Index.cshtml",
               "ViewState": "AgIAAKkAAAAAAAAAAAAAALsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T22:17:51.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T22:17:51.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 37,
               "Title": "EnrolmentsController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\EnrolmentsController.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\EnrolmentsController.cs",
@@ -384,19 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
-              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Organiser\\Index.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAswDwAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T04:16:55.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 31,
               "Title": "OrganiserController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\OrganiserController.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\OrganiserController.cs",
@@ -404,12 +731,11 @@
               "RelativeToolTip": "..\\RaceDay.Web\\Controllers\\OrganiserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T04:12:31.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-08T04:12:31.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 33,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Results\\Edit.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Results\\Edit.cshtml",
@@ -421,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 40,
               "Title": "EventEnrollment.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\EventEnrollment.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\EventEnrollment.cs",
@@ -433,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 38,
               "Title": "ResultsController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\ResultsController.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\ResultsController.cs",
@@ -445,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 36,
               "Title": "EnrolmentViewModel.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EnrolmentViewModel.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\EnrolmentViewModel.cs",
@@ -457,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 34,
               "Title": "ResultsContrller.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\ResultsContrller.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\ResultsContrller.cs",
@@ -469,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 41,
               "Title": "EventEnvironmentsController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventEnvironmentsController.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventEnvironmentsController.cs",
@@ -481,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 42,
               "Title": "Results.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\Results.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\Results.cs",
@@ -493,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 43,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Enrolments\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Enrolments\\Index.cshtml",
@@ -505,31 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EventEnrollmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
-              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
-              "RelativeToolTip": "RaceDay.API\\Controllers\\EventEnrollmentsController.cs",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAiwNQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T12:42:33.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RaceDay.Web.csproj",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\RaceDay.Web.csproj",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\RaceDay.Web.csproj",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\RaceDay.Web.csproj",
-              "RelativeToolTip": "..\\RaceDay.Web\\RaceDay.Web.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-08T04:05:01.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 47,
               "Title": "Participant.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\Participant.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\Participant.cs",
@@ -541,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 46,
               "Title": "Organiser.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\Organiser.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\Organiser.cs",
@@ -553,19 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "RaceDay.API\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAAAMoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T11:24:39.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 45,
               "Title": "RaceDayContext.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Data\\RaceDayContext.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Data\\RaceDayContext.cs",
@@ -577,7 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 44,
               "Title": "RaceDay.API.csproj",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\RaceDay.API.csproj",
               "RelativeDocumentMoniker": "RaceDay.API\\RaceDay.API.csproj",
@@ -589,7 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 48,
               "Title": "EventCategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Controllers\\EventCategoriesController.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Controllers\\EventCategoriesController.cs",
@@ -601,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 53,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Events\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Events\\Index.cshtml",
@@ -613,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 50,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\EventCategories\\Create.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\EventCategories\\Create.cshtml",
@@ -625,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 51,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\EventCategories\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\EventCategories\\Index.cshtml",
@@ -637,31 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Program.cs",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Program.cs",
-              "RelativeToolTip": "..\\RaceDay.Web\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T03:15:51.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "EventCategoryViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
-              "RelativeToolTip": "..\\RaceDay.Web\\Models\\EventCategoryViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T18:24:42.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 49,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\EventCategories\\Edit.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\EventCategories\\Edit.cshtml",
@@ -673,19 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "EventCategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventCategoriesController.cs",
-              "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventCategoriesController.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\EventCategoriesController.cs",
-              "RelativeToolTip": "RaceDay.API\\Controllers\\EventCategoriesController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAowHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T23:11:52.644Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 52,
               "Title": "EventCategory.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\EventCategory.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\EventCategory.cs",
@@ -697,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 58,
               "Title": "CreateEventViewModel.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\CreateEventViewModel.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\CreateEventViewModel.cs",
@@ -709,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 56,
               "Title": "UpdateEventRequest.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\UpdateEventRequest.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\UpdateEventRequest.cs",
@@ -721,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 55,
               "Title": "EditEventViewModel.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EditEventViewModel.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\EditEventViewModel.cs",
@@ -733,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 54,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Events\\Edit.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Events\\Edit.cshtml",
@@ -745,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 59,
               "Title": "EventEnvironmentViewModel.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\EventEnvironmentViewModel.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\EventEnvironmentViewModel.cs",
@@ -757,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 57,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Events\\Create.cshtml",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Events\\Create.cshtml",
@@ -769,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 60,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\wwwroot\\css\\site.css",
@@ -781,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 61,
               "Title": "LoginResponse.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\LoginResponse.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\LoginResponse.cs",
@@ -793,19 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "..\\RaceDay.Web\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "..\\RaceDay.Web\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T03:52:30.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 62,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\Models\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "..\\RaceDay.Web\\Models\\LoginViewModel.cs",
@@ -817,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 64,
               "Title": "CreateResultRequest.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\CreateResultRequest.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\CreateResultRequest.cs",
@@ -829,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 66,
               "Title": "ParticipantsController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\ParticipantsController.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\ParticipantsController.cs",
@@ -841,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 63,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Program.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Program.cs",
@@ -853,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 65,
               "Title": "UpdateResultRequest.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\UpdateResultRequest.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\UpdateResultRequest.cs",
@@ -865,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 67,
               "Title": "OrganisersController.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Controllers\\OrganisersController.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\OrganisersController.cs",
@@ -877,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 68,
               "Title": "OrganiserRegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\OrganiserRegisterRequest.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\OrganiserRegisterRequest.cs",
@@ -889,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 71,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\LoginRequest.cs",
@@ -901,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 69,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\casey\\AppData\\Roaming\\Microsoft\\UserSecrets\\72102a18-20c2-4f20-9935-a42a62b9eee1\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\72102a18-20c2-4f20-9935-a42a62b9eee1\\secrets.json",
@@ -913,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 70,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\appsettings.json",
               "RelativeDocumentMoniker": "RaceDay.API\\appsettings.json",
@@ -925,19 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "RaceDay.API\\Models\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\RegisterRequest.cs",
-              "RelativeToolTip": "RaceDay.API\\Models\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T13:10:25.797Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 72,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\User.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\User.cs",
@@ -949,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 73,
               "Title": "EventEnvironment.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Models\\EventEnvironment.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Models\\EventEnvironment.cs",
@@ -961,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 74,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "RaceDay.API\\Properties\\launchSettings.json",
@@ -973,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 75,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.API\\RaceDay.API\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\WeatherForecast.cs",

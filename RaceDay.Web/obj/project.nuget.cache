@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "Qia4k+neEnE=",
+  "dgSpecHash": "9bNJWanvEgo=",
   "success": true,
   "projectFilePath": "C:\\Users\\casey\\OneDrive\\Documentos\\RaceDay\\RaceDay.Web\\RaceDay.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\casey\\.nuget\\packages\\apache.arrow\\22.1.0\\apache.arrow.22.1.0.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\azure.core\\1.60.0\\azure.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\azure.storage.blobs\\12.30.1\\azure.storage.blobs.12.30.1.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\azure.storage.common\\12.29.0\\azure.storage.common.12.29.0.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\10.0.9\\microsoft.bcl.asyncinterfaces.10.0.9.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\microsoft.identity.client\\4.84.2\\microsoft.identity.client.4.84.2.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\4.84.2\\microsoft.identity.client.extensions.msal.4.84.2.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\system.clientmodel\\1.14.0\\system.clientmodel.1.14.0.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\system.io.hashing\\10.0.9\\system.io.hashing.10.0.9.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\system.memory.data\\10.0.9\\system.memory.data.10.0.9.nupkg.sha512",
+    "C:\\Users\\casey\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -17,7 +17,12 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>🏁 Browse Events</h4>
                 <p>Discover upcoming running, walking and cycling events.</p>
-                <a href="#" class="btn btn-primary mt-auto">Explore Events</a>
+
+                <a asp-controller="Events"
+                   asp-action="Browse"
+                   class="btn btn-primary mt-auto">
+                    Explore Events
+                </a>
             </div>
         </div>
 
@@ -25,7 +30,12 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>📋 My Enrolments</h4>
                 <p>View the events and categories you have entered.</p>
-                <a href="#" class="btn btn-primary mt-auto">My Enrolments</a>
+
+                <a asp-controller="ParticipantEnrollments"
+                   asp-action="Index"
+                   class="btn btn-primary mt-auto">
+                    My Enrolments
+                </a>
             </div>
         </div>
 
@@ -33,6 +43,7 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>🏆 My Results</h4>
                 <p>Check your finishing times and race positions.</p>
+
                 <a asp-controller="Participant"
                    asp-action="Results"
                    class="btn btn-primary mt-auto">
@@ -45,14 +56,21 @@
             <div class="card shadow-sm p-4 h-100">
                 <h4>👤 My Profile</h4>
                 <p>View and update your personal information.</p>
-                <a href="#" class="btn btn-primary mt-auto">My Profile</a>
+
+                <a asp-controller="Profile"
+                   asp-action="Index"
+                   class="btn btn-outline-primary">
+                    My Profile
+                </a>
             </div>
         </div>
 
     </div>
 
-    <form asp-controller="Account" asp-action="Logout"
-          method="post" class="mt-5">
+    <form asp-controller="Account"
+          asp-action="Logout"
+          method="post"
+          class="mt-5">
 
         @Html.AntiForgeryToken()
 

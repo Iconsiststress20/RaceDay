@@ -36,5 +36,8 @@ namespace RaceDay.Models
         public bool IsActive { get; set; } = true;
 
         public DateTime CreatedAt { get; set; }
+
+        [MaxLength(255)]
+        public string? ProfilePictureBlobName { get; set; }
     }
 }

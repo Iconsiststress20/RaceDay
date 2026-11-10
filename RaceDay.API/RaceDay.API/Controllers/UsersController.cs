@@ -53,6 +53,7 @@ namespace RaceDay.Controllers
 
         }
 
+
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
@@ -68,6 +69,8 @@ namespace RaceDay.Controllers
                     message = "An account with this email already exists."
                 });
             }
+
+            using var transaction = await _context.Database.BeginTransactionAsync();
 
             var user = new User
             {
@@ -87,6 +90,17 @@ namespace RaceDay.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
+            // Create the Participant record linked to the new User.
+            var participant = new Participant
+            {
+                UserID = user.UserID
+            };
+
+            _context.Participants.Add(participant);
+            await _context.SaveChangesAsync();
+
+            await transaction.CommitAsync();
+
             return Created($"/api/Users/{user.UserID}", new
             {
                 user.UserID,
@@ -99,6 +113,7 @@ namespace RaceDay.Controllers
                 user.CreatedAt
             });
         }
+
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginRequest request)
@@ -194,10 +209,105 @@ namespace RaceDay.Controllers
             });
         }
 
-        
 
 
+        [Authorize]
+        [HttpGet("me")]
+        public async Task<IActionResult> GetMyProfile()
+        {
+            var userIdValue = User.FindFirstValue(
+                System.Security.Claims.ClaimTypes.NameIdentifier);
+
+            if (!int.TryParse(userIdValue, out int userId))
+                return Unauthorized();
+
+            var user = await _context.Users
+                .Where(u => u.UserID == userId)
+                .Select(u => new
+                {
+                    u.UserID,
+                    u.FirstName,
+                    u.LastName,
+                    u.Email,
+                    u.PhoneNumber,
+                    u.Role,
+                    u.ProfilePictureBlobName
+                })
+                .FirstOrDefaultAsync();
+
+            if (user == null)
+                return NotFound();
+
+            return Ok(user);
+        }
 
 
+        [Authorize(Roles = "Participant,Organiser")]
+        [HttpPut("me")]
+        public async Task<IActionResult> UpdateMyProfile(UpdateMyProfileRequest request)
+        {
+            var userIdValue = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (!int.TryParse(userIdValue, out int userId))
+                return Unauthorized();
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.UserID == userId);
+
+            if (user == null)
+                return NotFound(new { message = "User not found." });
+
+            if (string.IsNullOrWhiteSpace(request.FirstName) ||
+                string.IsNullOrWhiteSpace(request.LastName))
+                return BadRequest(new { message = "First name and last name are required." });
+
+            user.FirstName = request.FirstName.Trim();
+            user.LastName = request.LastName.Trim();
+            user.PhoneNumber = request.PhoneNumber?.Trim();
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Profile updated successfully." });
+        }
+
+
+        [Authorize(Roles = "Participant,Organiser")]
+        [HttpPut("me/profile-picture")]
+        public async Task<IActionResult> UpdateProfilePicture(
+            UpdateProfilePictureRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.BlobName))
+                return BadRequest(new { message = "Invalid picture reference." });
+
+            var userIdValue = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (!int.TryParse(userIdValue, out int userId))
+                return Unauthorized();
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.UserID == userId);
+
+            if (user == null)
+                return NotFound(new { message = "User not found." });
+
+            user.ProfilePictureBlobName = request.BlobName;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Profile picture updated successfully." });
+        }
+
+
+    }
+    public class UpdateMyProfileRequest
+    {
+        public string FirstName { get; set; } = "";
+        public string LastName { get; set; } = "";
+        public string? PhoneNumber { get; set; }
+    }
+
+    public class UpdateProfilePictureRequest
+    {
+        public string BlobName { get; set; } = "";
     }
 }

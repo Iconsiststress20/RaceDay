@@ -7,7 +7,7 @@ using RaceDay.Models;
 
 namespace RaceDay.Controllers
 {
-    [Authorize(Roles = "Organiser")]
+    
     [ApiController]
     [Route("api/[controller]")]
     public class EventCategoriesController : ControllerBase
@@ -21,6 +21,7 @@ namespace RaceDay.Controllers
 
         // GET: api/EventCategories
         [HttpGet]
+        [Authorize(Roles = "Organiser,Participant")]
         public async Task<IActionResult> GetEventCategories()
         {
             var categories = await _context.EventCategories
@@ -41,6 +42,7 @@ namespace RaceDay.Controllers
 
         // POST: api/EventCategories
         [HttpPost]
+        [Authorize(Roles = "Organiser")]
         public async Task<IActionResult> CreateCategory(EventCategory request)
         {
             if (!ModelState.IsValid)
@@ -68,6 +70,7 @@ namespace RaceDay.Controllers
 
         // PUT: api/EventCategories/1
         [HttpPut("{id}")]
+        [Authorize(Roles = "Organiser")]
         public async Task<IActionResult> UpdateCategory(
             int id, EventCategory request)
         {
@@ -96,6 +99,7 @@ namespace RaceDay.Controllers
 
         // DELETE: api/EventCategories/1
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Organiser")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
             var category = await _context.EventCategories

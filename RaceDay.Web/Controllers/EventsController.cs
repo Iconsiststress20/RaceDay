@@ -385,5 +385,38 @@ namespace RaceDay.Web.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var token = HttpContext.Session.GetString("JWToken");
+
+            if (string.IsNullOrEmpty(token) ||
+                HttpContext.Session.GetString("UserRole") != "Participant")
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var client = _httpClientFactory.CreateClient("RaceDayAPI");
+
+            client.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", token);
+
+            var response = await client.GetAsync("api/Events");
+
+            if (!response.IsSuccessStatusCode)
+                return RedirectToAction("Browse");
+
+            var events = await response.Content
+                .ReadFromJsonAsync<List<EventViewModel>>();
+
+            var selectedEvent = events?
+                .FirstOrDefault(e => e.EventID == id);
+
+            if (selectedEvent == null)
+                return NotFound();
+
+            return View(selectedEvent);
+        }
+
     }
 }
