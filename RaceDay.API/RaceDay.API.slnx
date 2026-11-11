@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
   <Project Path="../RaceDay.Web/RaceDay.Web.csproj" Id="c4ed8809-d00c-4224-b0b4-5f1e957094d3" />
   <Project Path="RaceDay.API/RaceDay.API.csproj" />
 </Solution>

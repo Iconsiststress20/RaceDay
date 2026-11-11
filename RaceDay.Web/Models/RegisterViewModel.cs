@@ -31,5 +31,13 @@ namespace RaceDay.Web.Models
 
         [MaxLength(20)]
         public string? PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Date of birth is required.")]
+        [DataType(DataType.Date)]
+        public DateTime? DateOfBirth { get; set; }
+
+        [Required(ErrorMessage = "Please select your gender.")]
+        [MaxLength(10)]
+        public string Gender { get; set; } = "";
     }
 }

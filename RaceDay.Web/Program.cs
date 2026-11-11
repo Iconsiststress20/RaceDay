@@ -5,10 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Allow the MVC application to communicate with RaceDay API
+
 builder.Services.AddHttpClient("RaceDayAPI", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5180/");
+    var apiUrl = builder.Configuration["RaceDayAPI:BaseUrl"]
+                 ?? "http://localhost:5180/";
+
+    client.BaseAddress = new Uri(apiUrl);
 });
+
 
 // Add session support
 builder.Services.AddDistributedMemoryCache();

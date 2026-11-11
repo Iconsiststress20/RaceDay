@@ -25,5 +25,12 @@ namespace RaceDay.Models
 
         [MaxLength(20)]
         public string? PhoneNumber { get; set; }
+
+        [Required]
+        public DateTime? DateOfBirth { get; set; }
+
+        [Required]
+        [MaxLength(10)]
+        public string Gender { get; set; } = string.Empty;
     }
 }

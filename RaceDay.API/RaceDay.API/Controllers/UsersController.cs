@@ -93,7 +93,9 @@ namespace RaceDay.Controllers
             // Create the Participant record linked to the new User.
             var participant = new Participant
             {
-                UserID = user.UserID
+                UserID = user.UserID,
+                DateOfBirth = request.DateOfBirth!.Value,
+                Gender = request.Gender
             };
 
             _context.Participants.Add(participant);

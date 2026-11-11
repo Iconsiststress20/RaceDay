@@ -88,7 +88,9 @@ namespace RaceDay.Web.Controllers
                 model.LastName,
                 model.Email,
                 model.Password,
-                model.PhoneNumber
+                model.PhoneNumber,
+                model.DateOfBirth,
+                model.Gender
             };
 
             var response = await client.PostAsJsonAsync(
@@ -110,9 +112,11 @@ namespace RaceDay.Web.Controllers
             }
             else
             {
+                var errorDetails = await response.Content.ReadAsStringAsync();
+
                 ModelState.AddModelError(
                     string.Empty,
-                    "Registration failed. Please try again.");
+                    $"Registration failed. HTTP {(int)response.StatusCode}. Details: {errorDetails}");
             }
 
             return View(model);

@@ -913,8 +913,10 @@
       },
       "RegisterRequest": {
         "required": [
+          "dateOfBirth",
           "email",
           "firstName",
+          "gender",
           "lastName",
           "password"
         ],
@@ -945,6 +947,15 @@
             "maxLength": 20,
             "type": "string",
             "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "gender": {
+            "maxLength": 10,
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
